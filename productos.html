@@ -29,20 +29,6 @@
         margin-bottom: 20px;
     }
 
-    .product img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 5px;
-    }
-
-    .product h2 {
-        margin-top: 0;
-    }
-
-    .product p {
-        color: #666;
-    }
-
     .navbar {
         background-color: #b8eafa;
         padding: 10px;
@@ -51,7 +37,13 @@
         align-items: center;
     }
 
-    .navbar a {
+    .nav-logo,
+    .nav-derecha {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-derecha a {
         font-family: oswald, light;
         color: #1A1A1A;
         text-decoration: none;
@@ -61,43 +53,80 @@
     }
 
     #logotextprincipal {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
         font-family: oswald, bold;
         color: #1A1A1A;
         font-weight: 700;
         font-size: 24px;
         margin: 10px;
+        text-align: center;
+        text-decoration: none;
     }
 
-    .navbar a:hover {
+    .nav-derecha a:hover {
         text-decoration: underline;
     }
 
     #logotextprincipal:hover {
-        transform: scale(1.1);
+        transform: translateX(-50%) scale(1.1);
     }
 
+    .imagenmain {
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+
+    .tipocamiseta {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        font-family: oswald, bold;
+        color: #ffffff;
+
+    }
 </style>
 
 <body>
     <nav class="navbar">
-        <a href="../principal.html">
-            <img src="../perfil2.png" alt="logo" style="height: 60px;">
-        </a>
-        <div>
-            <a href="../principal.html" id="logotextprincipal" style="text-align: center;">RETRO CAMISETAS</a>
+        <div class="nav-logo">
+            <a href="../principal.html">
+                <img src="images\logo\logo2.png" alt="logo" style="height: 60px;">
+            </a>
         </div>
 
-        <ul style="list-style: none; margin: 0; padding: 0;">
-            <a href="../principal.html" style="margin-right: 15px;">Inicio</a>
-            <a href="productos.html" style="margin-right: 15px;">Productos</a>
-            <a href="#" style="margin-right: 15px;">Menu</a>
-        </ul>
+        <a href="../principal.html" id="logotextprincipal" style="text-align: center;">RETRO CAMISETAS</a>
+
+        <div class="nav-derecha">
+            <ul style="list-style: none; margin: 0; padding: 0;">
+                <a href="../principal.html" style="margin-right: 15px;">Inicio</a>
+                <a href="productos.html" style="margin-right: 15px;">Productos</a>
+                <a href="#" style="margin-right: 15px;">Menu</a>
+            </ul>
+        </div>
     </nav>
+
     <div class="imagenmain">
-
-        <img src="/integrador/principal/productos/imagen1.jpg" alt="marado" style="width: 100%; height: 60%; object-fit: cover;">
+        <img src="images\img_productos\camisetas\imagen1.jpg" alt="marado"
+            style="width: 100%; height: 450px; object-fit: cover;">
         <h2>Conoce nuestros productos</h2>
+    </div>
 
+    <div class="tipocamiseta">
+        <div class="tipoprodu">
+            <img src="/images/img_productos/imgclubes.png" alt="Camiseta 1">
+            <h2>Clubes</h2>
+            <p>Las mejores camisetas retro y vintage de los clubes mas icónicos del mundo.</p>
+        </div>
+
+        <div class="tipoprodu">
+            <img src="/images/img_productos/imgselecciones.png" alt="Camiseta 2">
+            <h2>Selecciones</h2>
+            <p>Revive la historia del fútbol con nuestras camisetas retro de selecciones nacionales.</p>
+        </div>
     </div>
 
 
