@@ -1,120 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-<style>
-body{
-    background-color: rgb(123, 123, 143);
-
-}
-h1{
-    display: flex;
-justify-content: center;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-
-border-style: solid;
-border-color: black;
-border-radius: 20px;
-font-size: 160px;
-color: rgb(3, 15, 13);
-}
-h1::after{
-content: url(/images/logo/logo2.png);
-border-style: solid;
-border-color: black;
-border-radius: 20px;
-margin-left: 10px;
-}
-
-
-.imagenes{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    width: 1400px;
-    background-color: black;
-}
-.imagenes img{
-width: 300px;
-height: 150;
-
-
-}
-div p::first-line{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
-font-size: 30px;
-color: #0d2c66;
-
-}
-
-.lista{
-background-color: #6097b8;
-display: flex;
-justify-content: flex-start;
-border-style:solid;
-border-width: 10px}
-.txt{
-background-color: #6097b8;
-width: 400px;
-margin-left: 450px;
-border-style:solid;
-border-width: 10px;
-}
-</style>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Principal</title>
+    <title>Retro Camisetas</title>
+    <style>
+        body {
+           background-image:url(/images/img_inicio/Soccer\ Stadium.jpeg);
+           background-size: cover;
+        
+        }
+
+        h1 {
+            display: flex;
+            justify-content: center;
+            border: solid 1px black;
+            border-radius: 20px;
+            font-size: 170px;
+            color: rgb(3, 15, 13);
+        }
+
+        h1::after {
+            content: url(/images/img_inicio/maradopng.png);
+            border: solid 1px black;
+            border-radius: 20px;
+            margin-left: 10px;
+        }
+
+        .imagenes {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            width: 100%;
+            max-width: 1400px;
+            margin: 20px auto;
+            background-color: black;
+            padding: 10px;
+            border: solid 5px black;
+        }
+
+        .imagenes img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .txt, .lista {
+            background-image: url(/images/img_inicio/d0ccd4bb52c50918f156aa7466ca153d.jpg);
+            background-size: cover;
+            border: solid 5px black;
+            padding: 15px;
+            margin: 20px auto;
+            max-width: 800px;
+            
+        }
+
+        .txt p, ul {
+            font-size: 18px;
+            color: rgb(255, 255, 255);
+            background-color: rgb(0, 0, 0);
+           
+        }
+        .txt p::first-line{
+font-size: 30px;
+
+
+        }
+
+        .lista p {
+            background-color: black;
+            background-size: cover;
+            display: inline-block;
+            font-size: 22px;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+       
+
+        a {
+            color: #001f4d;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin: 20px 0;
+            color: black;
+        }
+
+    </style>
 </head>
 <body>
 
-<img src="/images/logo/logo.png" alt="logo" style="width: 120px;" >
+    <img src="/images/logo/logo2.png" alt="Logo Retro Camisetas" style="width: 150px;">
+
     <h1>Retro camisetas</h1>
-<div class="imagenes">
-<img src="/descarga (1).jpg" alt="">
-<img src="/descarga.jpg" alt="">
-<img src="/Jerseys.jpg" alt="">
-<img src="/Our vintage football collection arrives this….jpg" alt="fotodecamiseta">
-<img src="/Off-season.jpg" alt="">
-</div>
 
-<div class="txt">
-<p style="color: rgb(0, 0, 0);">Bienvenidos a retro camisetas! <br>
-   en retro camisetas nos vuelve loco la pelotita como a vos, por eso te ofrecemos las camisetas mas iconicas de la historia de este hermoso deporte <br> 
-<img src="integrador/perfil.jpg" alt="perfil">
-    <h1>"Retro camisetas"</h1>
+    <div class="imagenes">
+        <img src="/images/img_inicio/camisetas1.jpg" alt="Camiseta 1">
+        <img src="/images/img_inicio/camisetas2.jpg" alt="Camiseta 2">
+        <img src="/images/img_inicio/camisetas3.jpg" alt="Camiseta 3">
+        <img src="/images/img_inicio/camisetas4.jpg" alt="Camiseta 4">
+        <img src="/images/img_inicio/camisetas5.jpg" alt="Camiseta 5">
+    </div>
 
-<img src="/gettyimages-182790712-612x612.jpg" alt="fotodecamisetas">
-<p>Bienvenidos a retro futbol! <br>
-   en retro futbol nos vuelve loco la pelotita como a vos, por eso te ofrecemos las camisetas mas iconicas de la historia de este hermoso deporte <br> 
-Nuestro sitio esta dedicado para aquellos fanaticos que valoran el diseño y la calidad de cada casaca <br>
-</p>
-</div>
+    <div class="txt">
+        <p>
+            ¡Bienvenidos a Retro Camisetas! <br>
+            En Retro Camisetas nos vuelve loco la pelotita como a vos, por eso te ofrecemos las camisetas más icónicas
+            de la historia de este hermoso deporte. <br>
+            Nuestro sitio está dedicado a los fanáticos que valoran el diseño y la calidad de cada casaca.
+        </p>
+    </div>
 
-<div class="lista">
-<p>Aca vas a encontrar:</p>
-<ul>
-<li>Camisetas legendarias de clubes y selecciones de distintas epocas</li>
-<li>Un catálogo completo donde podés explorar los modelos disponibles</li>
-<li>Un formulario de compra para que puedas adquirir tu camiseta retro favorita de forma fácil y rápida.</li>
-</ul>
-</div>
- 
+    <div class="lista">
+        <p>Acá vas a encontrar:</p>
+        <ul>
+            <li>Camisetas legendarias de clubes y selecciones de distintas épocas.</li>
+            <li>Un catálogo completo donde podés explorar los modelos disponibles.</li>
+            <li>Un formulario para adquirir tu camiseta retro favorita de forma fácil y rápida.</li>
+        </ul>
+    </div>
 
+    <div class="lista">
+        <p>Accesos rápidos:</p>
+        <ul>
+            <li><a href="principal/productos/productos.html">Ver camisetas disponibles</a></li>
+            <li><a href="principal/formulario/formulario.html">Registrarse en el sitio</a></li>
+        </ul>
+    </div>
 
-
-
-</p>
-<ul>
-    <p>Ver camisetas disponible</p>
-<li><a href="/principal/productos/productos.html" >Productos</a></li>
-   <p>Registrarse en el sitio</p>
-<li><a href="/principal/formulario/formulario.html" >Formulario</a></li>
-</ul>
-
-
-
+    <footer>
+        © 2025 Retro Camisetas - Todos los derechos reservados
+    </footer>
 
 </body>
 </html>
