@@ -14,6 +14,7 @@
     }
 
     .comienzo {
+      position: sticky;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -24,7 +25,10 @@
     .comienzo img {
       height: 60px;
     }
-
+.abajo{
+height: 40px;
+background-color: aqua;
+}
     .comienzo_derecha a {
       margin-left: 15px;
       color: #001f4d;
@@ -60,24 +64,40 @@
       padding: 10px;
       max-width: 1200px;
       margin: 0 auto 20px;
+    flex-wrap: nowrap;
+    overflow: hidden;
+
+    }
+  .imagenes  img:hover{
+border-radius: 20px;
+border-width: 30px;
+height: 300px;
+width: 300px;
+justify-content: center;
+align-items: center;
     }
 
-    .imagenes img {
+     .imagenes img {
       width: 220px;
       height: 220px;
       object-fit: cover;
+   
     }
 
     .txt, .lista {
-      background-image: url(/images/img_inicio/d0ccd4bb52c50918f156aa7466ca153d.jpg);
+      background-color:#1A1A1A ;
       background-size: cover;
-      border: 3px solid black;
+      border: 3px solid rgb(65, 55, 55);
       padding: 15px;
       margin: 20px auto;
       max-width: 800px;
       color: white;
       background-color: black;
+      border-radius: 30px;
     }
+
+
+
 
     .txt p {
       font-size: 18px;
@@ -103,7 +123,7 @@
 <body>
   <header class="comienzo">
     <img src="/images/logo/logo2.png" alt="Logo Retro Camisetas">
-    <p style="font-size: 24px; align-items: center;">RETRO CAMISETAS</p>
+    <p style="font-size: 24px; align-items: center;font-family: oswald, bold; ">RETRO CAMISETAS</p>
     <nav class="comienzo_derecha">
       <a href="/productos.html">Productos</a>
       <a href="/registro.html">Registro</a>
@@ -138,8 +158,51 @@
     </ul>
   </section>
 
-  <footer>
+ <footer>
     © 2025 Retro Camisetas - Todos los derechos reservados
   </footer>
+  <div class="abajo">
+    <div>
+<p>Redes sociales</p>
+<ul>
+<li>Instagram</li>
+<li>Facebook</li>
+</ul>
+    </div>
+    <div>
+<p>Institucional</p>
+<ul>
+<li>Politica de privacidad</li>
+<li>quienes somos</li>
+<li>terminos y condicones</li>
+<li>sustentabilidad</li>
+<li>defensa del consumidor</li>
+<li>trabaja con nosotros</li>
+</ul>
+    </div>
+    <div>
+<p>Centro de Atención al Cliente</p>
+<ul>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+
+    </div>
+    <div>
+<p>Ayuda</p>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+
+    </div>
+</div>
+
+ 
 </body>
 </html>
