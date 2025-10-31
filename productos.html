@@ -56,6 +56,7 @@
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
+        transition: transform 0.3s ease;
         font-family: oswald, bold;
         color: #1A1A1A;
         font-weight: 700;
@@ -71,15 +72,50 @@
 
     #logotextprincipal:hover {
         transform: translateX(-50%) scale(1.1);
+        transition: transform 0.3s ease;
+
     }
 
     .imagenmain {
         position: relative;
         text-align: center;
         color: white;
+        margin: 30px;
     }
 
     .tipocamiseta {
+        display: flex;
+        gap: 80px;
+        justify-content: center;
+        align-items: center;
+        font-family: oswald, bold;
+        color: #ffffff;
+    }
+
+    .imagentipocamiseta {
+        transition: transform 0.3s ease;
+    }
+
+
+    .imagentipocamiseta:hover {
+        transform: scale(1.05);
+    }
+
+    .separador {
+
+        border: none;
+        height: 2px;
+        background-color: #b8eafa;
+        margin: 40px 50px 40px 50px;
+    }
+
+    .titulos {
+        font-family: oswald, bold;
+        color: #ffffff;
+        text-align: center;
+    }
+
+    .equipo {
         display: flex;
         gap: 20px;
         justify-content: center;
@@ -87,6 +123,28 @@
         font-family: oswald, bold;
         color: #ffffff;
 
+    }
+
+    .cajita {
+        border-bottom: 2px solid;
+        border-color: #b8eafa;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .seccionclubes {
+        text-align: center;
+        margin-top: 40px;
+        align-items: center;
+    }
+
+    .club {
+        margin-bottom: 20px;
+        transition: transform 0.3s ease;
+    }
+
+    .club:hover {
+        transform: scale(1.1);
     }
 </style>
 
@@ -110,24 +168,74 @@
     </nav>
 
     <div class="imagenmain">
-        <img src="images\img_productos\camisetas\imagen1.jpg" alt="marado"
-            style="width: 100%; height: 450px; object-fit: cover;">
-        <h2>Conoce nuestros productos</h2>
+        <img src="images/img_productos/camisetas/diego.png" alt="marado"
+            style="width:90%; height: 450px; object-fit: cover;"><hr class="separador">
+        <h2 class="titulos" style="margin: 20px 40px 40px 40px;">CONOCE NUESTROS PRODUCTOS</h2>
+        <hr class="separador">
     </div>
 
     <div class="tipocamiseta">
-        <div class="tipoprodu">
-            <img src="/images/img_productos/imgclubes.png" alt="Camiseta 1">
-            <h2>Clubes</h2>
-            <p>Las mejores camisetas retro y vintage de los clubes mas icónicos del mundo.</p>
+        <div>
+            <a href="#seccion-clubes">
+            <img class="imagentipocamiseta" src="/images/img_productos/imgclubes.png" alt="Camiseta Clubes">
+            </a>
+            <div class="cajita">
+                <h2>Clubes</h2>
+                <p>Las mejores camisetas retro y vintage de los clubes mas icónicos del mundo.</p>
+            </div>
         </div>
 
-        <div class="tipoprodu">
-            <img src="/images/img_productos/imgselecciones.png" alt="Camiseta 2">
-            <h2>Selecciones</h2>
-            <p>Revive la historia del fútbol con nuestras camisetas retro de selecciones nacionales.</p>
+        <div>
+            <img class="imagentipocamiseta" src="/images/img_productos/imgselecciones.png" alt="Camiseta Selecciones">
+            <div class="cajita">
+                <h2>Selecciones</h2>
+                <p>Reviví la historia del fútbol con nuestras camisetas retro de selecciones nacionales.</p>
+            </div>
         </div>
     </div>
+    <hr class="separador">
+
+    <div class="seccionclubes" id="seccion-clubes">
+        <h1 class="titulos">CLUBES</h1>
+        <div class="equipo">
+            <div class="club">
+                <img src="/images/img_productos/milan.png" alt="milan"
+                    style="width: 200px; height: 200px; object-fit: cover;">
+                <h3>AC Milan</h3>
+            </div>
+
+            <div class="club">
+                <img src="/images/img_productos/arsenal.png" alt="arsenal"
+                    style="width: 200px; height: 200px; object-fit: cover;">
+                <h3>Arsenal</h3>
+            </div>
+
+            <div class="club">
+                <img src="/images/img_productos/barcelona.png" alt="barcelona"
+                    style="width: 200px; height: 200px; object-fit: cover;">
+                <h3>FC Barcelona</h3>
+
+            </div>
+
+            <div class="club">
+                <img src="/images/img_productos/bayernmunchen.png" alt="bayernmunchen"
+                    style="width: 200px; height: 200px; object-fit: cover;">
+                <h3>Bayern Munchen</h3>
+
+            </div>
+
+            <div class="club">
+                <img src="/images/img_productos/boca.png" alt="boca"
+                    style="width: 200px; height: 200px; object-fit: cover;">
+                <h3>CA Boca Juniors</h3>
+
+            </div>
+        </div>
+
+        <div>
+
+        </div>
+
 
 
 
