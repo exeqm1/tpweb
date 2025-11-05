@@ -4,11 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
+    <style>
+        body {
+  background-image: url(/images/img_inicio/2e3ab52b1035c9c06b2aa21b9db95659.jpg);
+  background-size: cover;          /* ocupa toda la pantalla */
+  background-position: center;     /* centra la imagen */
+  background-repeat: no-repeat;    /* evita que se repita */
+  background-attachment: fixed;    /* efecto más estable al scrollear */
+  
+  margin: 0;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;               /* asegura que el fondo cubra toda la altura */
+}
+
+.arriba{
+position: sticky;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #b8eafa;
+      padding: 10px ;
+        
+}
+.arriba img{
+height: 70px;
+
+}
+.arriba-derecha a {
+ margin-left: 15px;
+      color: #001f4d;
+      text-decoration: none;
+      font-weight: bold;
+  
+}
+.arriba-derecha a:hover{
+      text-decoration: underline;
+    }
+.relleno{
+    display: flex;
+    flex-direction: column;
+align-items: center;
+justify-content: center;
+
+
+}
+form{
+ display: flex;
+  flex-direction: column; 
+  align-items: center;     
+  justify-content: center;
+
+border-style: solid;
+border-radius: 30px;
+height: 770px;
+width: 350px;
+background-color: rgba(240, 248, 255, 0.9);
+}
+
+form input:focus {
+  border-color: #000103;
+  
+}
+form input{
+border-style: solid;
+border-bottom: 50px;
+
+}
+form label, form input {
+  margin: 6px 0; 
+}
+form p{
+font-size: 20px;
+font-style: italic;
+text-align: center;
+background-color: #8cd7f0;
+border-radius: 20px;
+border: 20px;
+}
+
+
+    </style>
 </head>
 <body>
-    <h1>Registrarme</h1>
+
+<div class="arriba">
+<img src="/images/logo/logo2.png" alt="foto perfil">
+<p style="font-size: 24px; align-items: center;font-family: oswald, bold; " >RETRO CAMISETAS</p>
+  
+<div class="arriba-derecha">
+<a href="principal.html">Principal</a>
+<a href="productos.html">Productos</a>
+</div>
+
+</div >
+<div class="relleno">
+ <h1 style="color: beige;">Registrarme</h1>
+ 
     <form action="procesar.php" method="post">
-        <p>Datos Personales</p>
+        <p >Datos Personales</p>
 <label for="nombre">Nombre</label>
 <input type="text" id="nombre" name="nombre">
 <label for="apellido">Apellido</label>
@@ -28,10 +121,15 @@
 <input type="password" id="contra" name="contra" min="8">
 <label for="contra1">Confirmar Contraseña </label>
 <input type="password" id="contra1" name="contra1" min="8">
-<input type="checkbox" id="xd">
-<label for="xd">Acepto las Políticas de Privacidad y Términos y Condiciones</label>
 
-<input type="submit" value="Continuar">
+<label for="xd">Acepto las Políticas de Privacidad y Términos y Condiciones</label>
+<input type="checkbox" id="xd">
+<input type="submit" value="Continuar" style="border: 2px; border-style: solid;" >
     </form>
+    
+    <footer>
+    © 2025 Retro Camisetas - Todos los derechos reservados
+  </footer>
+  </div>
 </body>
 </html>
