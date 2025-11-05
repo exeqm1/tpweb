@@ -38,19 +38,29 @@
     }
 
     h1 {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 20px;
-      font-size: 100px;
-      color: #030f0d;
-      margin: 30px 0;
-    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  font-size: 80px; 
+  color: #030f0d;
+  margin: 40px ; 
+  position: relative; 
+}
 
-    h1::after {
-      content: url(/images/img_inicio/maradopng.png);
-      margin-left: 10px;
-    }
+h1::after {
+  content: "";
+  display: inline-block;
+  width: 80px;  
+  height: 80px;
+  margin-left: 15px;
+  background-image: url(/images/img_inicio/maradopng.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+   
 
     .imagenes {
       display: flex;
@@ -125,6 +135,11 @@ background: #4b504f;
 color: white;
 font-size: 15px;
 }
+.espacio{
+  display: flex;             
+  flex-direction: column;
+  gap: 80px;
+}
   </style>
 </head>
 <body>
@@ -136,7 +151,7 @@ font-size: 15px;
       <a href="/registro.html">Registro</a>
     </nav>
   </div>
-
+<div class="espacio">
   <h1>Retro camisetas</h1>
 
   <section class="imagenes">
@@ -168,8 +183,11 @@ font-size: 15px;
  <footer>
     © 2025 Retro Camisetas - Todos los derechos reservados
   </footer>
+
+  </div>
   <div class="abajo">
     <div>
+      
 <p>Redes sociales</p>
 <ul>
 <li>Instagram</li>
