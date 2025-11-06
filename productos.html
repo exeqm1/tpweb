@@ -146,6 +146,30 @@
     .club:hover {
         transform: scale(1.1);
     }
+
+    .contenedor-carousel {
+        width: 80%;
+        overflow: hidden;
+        margin: auto;
+        border-radius: 10px;
+        border-color: #1A1A1A;
+        position: relative;
+    }
+
+    .slides-carousel {
+        display: flex;
+    }
+
+    .slide {
+        display: none;
+        width: 100%;
+        box-sizing: border-box;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .slide.active {
+        display: block;
+    }
 </style>
 
 <body>
@@ -169,7 +193,8 @@
 
     <div class="imagenmain">
         <img src="images/img_productos/camisetas/diego.png" alt="marado"
-            style="width:90%; height: 450px; object-fit: cover;"><hr class="separador">
+            style="width:90%; height: 450px; object-fit: cover;">
+        <hr class="separador">
         <h2 class="titulos" style="margin: 20px 40px 40px 40px;">CONOCE NUESTROS PRODUCTOS</h2>
         <hr class="separador">
     </div>
@@ -177,7 +202,7 @@
     <div class="tipocamiseta">
         <div>
             <a href="#seccion-clubes">
-            <img class="imagentipocamiseta" src="/images/img_productos/imgclubes.png" alt="Camiseta Clubes">
+                <img class="imagentipocamiseta" src="images/img_productos/imgclubes.png" alt="Camiseta Clubes">
             </a>
             <div class="cajita">
                 <h2>Clubes</h2>
@@ -186,7 +211,7 @@
         </div>
 
         <div>
-            <img class="imagentipocamiseta" src="/images/img_productos/imgselecciones.png" alt="Camiseta Selecciones">
+            <img class="imagentipocamiseta" src="images/img_productos/imgselecciones.png" alt="Camiseta Selecciones">
             <div class="cajita">
                 <h2>Selecciones</h2>
                 <p>Reviví la historia del fútbol con nuestras camisetas retro de selecciones nacionales.</p>
@@ -199,42 +224,67 @@
         <h1 class="titulos">CLUBES</h1>
         <div class="equipo">
             <div class="club">
-                <img src="/images/img_productos/milan.png" alt="milan"
+                <img src="images/img_productos/milan.png" alt="milan"
                     style="width: 200px; height: 200px; object-fit: cover;">
                 <h3>AC Milan</h3>
             </div>
 
             <div class="club">
-                <img src="/images/img_productos/arsenal.png" alt="arsenal"
+                <img src="images/img_productos/arsenal.png" alt="arsenal"
                     style="width: 200px; height: 200px; object-fit: cover;">
                 <h3>Arsenal</h3>
             </div>
 
             <div class="club">
-                <img src="/images/img_productos/barcelona.png" alt="barcelona"
+                <img src="images/img_productos/barcelona.png" alt="barcelona"
                     style="width: 200px; height: 200px; object-fit: cover;">
                 <h3>FC Barcelona</h3>
 
             </div>
 
             <div class="club">
-                <img src="/images/img_productos/bayernmunchen.png" alt="bayernmunchen"
+                <img src="images/img_productos/bayernmunchen.png" alt="bayernmunchen"
                     style="width: 200px; height: 200px; object-fit: cover;">
                 <h3>Bayern Munchen</h3>
 
             </div>
 
             <div class="club">
-                <img src="/images/img_productos/boca.png" alt="boca"
+                <img src="images/img_productos/boca.png" alt="boca"
                     style="width: 200px; height: 200px; object-fit: cover;">
                 <h3>CA Boca Juniors</h3>
 
             </div>
         </div>
+    </div>
 
-        <div>
+    <div
+        style="background-color: #b8eafa; width: 70%; height:300px; text-align: center; margin: 50px auto; border-radius: 10px; padding: 20px; display: flex;">
+        <div class="contenedor-carousel" style="display: flex;">
+            <div class="slides-carousel">
+                <img src="images/img_productos/milan.png" class="slide active"
+                    style="width: 20%; height: 200px; object-fit: cover;">
+                <img src="images/img_productos/arsenal.png" class="slide"
+                    style="width: 20%; height: 200px; object-fit: cover;">
+                <img src="images/img_productos/barcelona.png" class="slide"
+                    style="width: 20%; height: 200px; object-fit: cover;">
+                <img src="images/img_productos/bayernmunchen.png" class="slide"
+                    style="width: 20%; height: 200px; object-fit: cover;">
+                <img src="images/img_productos/boca.png" class="slide"
+                    style="width: 20%; height: 200px; object-fit: cover;">
+            </div>
+
+            <button style="width: 20px; height: 20px; margin-right: 10px;">
+                &#10094;
+            </button>
+
+            <button style="width: 20px; height: 20px; margin-left: 10px;">
+                &#10095;
+            </button>
 
         </div>
+    </div>
+
 
 
 
