@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,14 +6,15 @@
   <title>Retro Camisetas</title>
   <style>
     body {
-      background-image: url(/images/img_inicio/Soccer\ Stadium.JPG);
+      background-image: url(/images/img_inicio/Soccer%20Stadium.JPG);
       background-size: cover;
       margin: 0;
       font-family: Arial, sans-serif;
     }
 
     .comienzo {
-      position: sticky;
+      
+      top: 0;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -38,75 +38,60 @@
     }
 
     h1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-  font-size: 80px; 
-  color: #030f0d;
-  margin: 40px ; 
-  position: relative; 
-}
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 80px; 
+      color: #030f0d;
+      margin: 40px; 
+      position: relative; 
+    }
 
-h1::after {
-  content: "";
-  display: inline-block;
-  width: 80px;  
-  height: 80px;
-  margin-left: 15px;
-  background-image: url(/images/img_inicio/maradopng.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-   
+    h1::after {
+      content: "";
+      display: inline-block;
+      width: 80px;  
+      height: 80px;
+      margin-left: 15px;
+      background-image: url(/images/img_inicio/maradopng.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
 
     .imagenes {
       display: flex;
       justify-content: center;
       gap: 20px;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       background-color: black;
       padding: 10px;
       max-width: 1200px;
       margin: 0 auto 20px;
-    flex-wrap: nowrap;
-    overflow: hidden;
-
-    }
-  .imagenes  img:hover{
-border-radius: 20px;
-border-width: 30px;
-height: 300px;
-width: 300px;
-justify-content: center;
-
-align-content: center;
-transform: scale(1.4);
+      overflow: hidden;
     }
 
-     .imagenes img {
+    .imagenes img {
       width: 220px;
       height: 220px;
-      object-fit: cover;
-   
+    
+      
+    }
+
+    .imagenes img:hover {
+      border-radius: 20px;
+      transform: scale(1.4);
     }
 
     .txt, .lista {
-      background-color:#1A1A1A ;
-      background-size: cover;
+      background-color: black;
       border: 3px solid rgb(65, 55, 55);
       padding: 15px;
       margin: 20px auto;
       max-width: 800px;
       color: white;
-      background-color: black;
       border-radius: 30px;
     }
-
-
-
 
     .txt p {
       font-size: 18px;
@@ -116,122 +101,150 @@ transform: scale(1.4);
       font-size: 28px;
     }
 
-    .lista p{
+    .lista p {
       font-size: 28px;
-      
     }
 
     footer {
       text-align: center;
       margin: 20px 0;
       color: black;
-      font-weight: bold;
+     
     }
-    
-    .abajo{
-display: flex;
-justify-content:space-around;
-background: #4b504f;
-color: white;
-font-size: 15px;
-}
-.espacio{
-  display: flex;             
-  flex-direction: column;
-  gap: 80px;
-}
+
+    .abajo {
+      display: flex;
+      justify-content: space-around;
+      background: #4b504f;
+      color: white;
+      font-size: 15px;
+      padding: 20px 0;
+    }
+
+    .espacio {
+      display: flex;             
+      flex-direction: column;
+      gap: 80px;
+    }
   </style>
 </head>
+
 <body>
   <div class="comienzo">
     <img src="/images/logo/logo2.png" alt="Logo Retro Camisetas">
-    <p style="font-size: 24px; align-items: center;font-family: oswald, bold; ">RETRO CAMISETAS</p>
+    <p style="font-size: 24px; font-family: Oswald, sans-serif;">RETRO CAMISETAS</p>
     <nav class="comienzo_derecha">
       <a href="/productos.html">Productos</a>
       <a href="/registro.html">Registro</a>
     </nav>
   </div>
-<div class="espacio">
-  <h1>Retro camisetas</h1>
 
-  <section class="imagenes">
-    <img src="/images/img_inicio/camisetas1.jpg" alt="Camiseta 1">
-    <img src="/images/img_inicio/camisetas2.jpg" alt="Camiseta 2">
-    <img src="/images/img_inicio/camisetas3.jpg" alt="Camiseta 3">
-    <img src="/images/img_inicio/camisetas4.jpg" alt="Camiseta 4">
-    <img src="/images/img_inicio/camisetas5.jpg" alt="Camiseta 5">
-  </section>
+  <div class="espacio">
+    <h1>Retro Camisetas</h1>
 
-  <section class="txt">
-    <p>
-      ¡Bienvenidos a Retro Camisetas! <br>
-      En Retro Camisetas nos vuelve loco la pelotita como a vos, por eso te ofrecemos las camisetas más icónicas
-      de la historia de este hermoso deporte. <br>
-      Nuestro sitio está dedicado a los fanáticos que valoran el diseño y la calidad de cada casaca.
-    </p>
-  </section>
+    <section class="imagenes">
+      <img src="/images/img_inicio/camisetas1.jpg" alt="Camiseta 1">
+      <img src="/images/img_inicio/camisetas2.jpg" alt="Camiseta 2">
+      <img src="/images/img_inicio/camisetas3.jpg" alt="Camiseta 3">
+      <img src="/images/img_inicio/camisetas4.jpg" alt="Camiseta 4">
+      <img src="/images/img_inicio/camisetas5.jpg" alt="Camiseta 5">
+    </section>
 
-  <section class="lista">
-    <p>Acá vas a encontrar:</p>
-    <ul>
-      <li>Camisetas legendarias de clubes y selecciones de distintas épocas.</li>
-      <li>Un catálogo completo donde podés explorar los modelos disponibles.</li>
-      <li>Un formulario para adquirir tu camiseta retro favorita de forma fácil y rápida.</li>
-    </ul>
-  </section>
+    <section class="txt">
+      <p>
+        ¡Bienvenidos a Retro Camisetas! <br>
+        En Retro Camisetas nos vuelve loco la pelotita como a vos, por eso te ofrecemos las camisetas más icónicas
+        de la historia de este hermoso deporte. <br>
+        Nuestro sitio está dedicado a los fanáticos que valoran el diseño y la calidad de cada casaca.
+      </p>
+    </section>
 
- <footer>
-    © 2025 Retro Camisetas - Todos los derechos reservados
-  </footer>
+    <section class="lista">
+      <p>Acá vas a encontrar:</p>
+      <ul>
+        <li>Camisetas legendarias de clubes y selecciones de distintas épocas.</li>
+        <li>Un catálogo completo donde podés explorar los modelos disponibles.</li>
+        <li>Un formulario para adquirir tu camiseta retro favorita de forma fácil y rápida.</li>
+      </ul>
+    </section>
+    <div id="carrusel">
+<button id="izq" >izquierda</button>
 
+<img  id= "ima" src="/images/img_inicio/ima1.jpg" alt="">
+<button id="der"> derecha</button>
+
+    </div>
+    <script>
+const imagenes=["/images/img_inicio/ima1.jpg","/images/img_inicio/ima2.jpg","/images/img_inicio/ima1.jpg"]
+
+let ini=0;
+
+const imagen= document.getElementById("ima")
+const btizquierdo= document.getElementById("izq");
+const btderecho= document.getElementById("der");
+
+function mostrarimagen(){
+imagen.src= imagenes[ini];
+
+}
+btderecho.addEventListener('click',function () {
+  ini++;
+      if (ini >= imagenes.length)  ini= 0; 
+      mostrarimagen()
+
+})
+
+
+btizquierdo.addEventListener('click',function () {
+  ini--;
+      if (ini < 0) ini = imagenes.length - 1; 
+      mostrarimagen()
+
+})
+
+    </script>
+
+    <footer>© 2025 Retro Camisetas - Todos los derechos reservados</footer>
   </div>
+
   <div class="abajo">
     <div>
-      
-<p>Redes sociales</p>
-<ul>
-<li>Instagram</li>
-<li>Facebook</li>
-</ul>
+      <p>Redes sociales</p>
+      <ul>
+        <li>Instagram</li>
+        <li>Facebook</li>
+      </ul>
     </div>
     <div>
-<p>Institucional</p>
-<ul>
-<li>Politica de privacidad</li>
-<li>quienes somos</li>
-<li>terminos y condicones</li>
-<li>sustentabilidad</li>
-<li>defensa del consumidor</li>
-<li>trabaja con nosotros</li>
-</ul>
+      <p>Institucional</p>
+      <ul>
+        <li>Política de privacidad</li>
+        <li>Quiénes somos</li>
+        <li>Términos y condiciones</li>
+        <li>Sustentabilidad</li>
+        <li>Defensa del consumidor</li>
+        <li>Trabajá con nosotros</li>
+      </ul>
     </div>
     <div>
-<p>Centro de Atención al Cliente</p>
-<ul>
-  <li>libros de quejas online</li>
-  <li>whatsapp de lunes a viernes</li>
-  <li>0008-5554-333-0999</li>
-</ul>
-
-
-
-
-
+      <p>Centro de Atención al Cliente</p>
+      <ul>
+        <li>Libros de quejas online</li>
+        <li>WhatsApp de lunes a viernes</li>
+        <li>0008-5554-333-0999</li>
+      </ul>
     </div>
     <div>
-<p>Ayuda</p>
-<ul>
-<li>Condiciones de pago</li>
-<li>Preguntas frecuentes</li>
-<li>como comprar?</li>
-<li>como medir tu talle?</li>
-<li>sucursales</li>
-<li>entregas</li>
-</ul>
-
+      <p>Ayuda</p>
+      <ul>
+        <li>Condiciones de pago</li>
+        <li>Preguntas frecuentes</li>
+        <li>Cómo comprar?</li>
+        <li>Cómo medir tu talle?</li>
+        <li>Sucursales</li>
+        <li>Entregas</li>
+      </ul>
     </div>
-</div>
-
- 
+  </div>
 </body>
 </html>
