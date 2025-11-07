@@ -7,14 +7,14 @@
     <style>
         body {
   background-image: url(/images/img_inicio/2e3ab52b1035c9c06b2aa21b9db95659.jpg);
-  background-size: cover;          /* ocupa toda la pantalla */
-  background-position: center;     /* centra la imagen */
-  background-repeat: no-repeat;    /* evita que se repita */
-  background-attachment: fixed;    /* efecto más estable al scrollear */
+  background-size: cover;          
+  background-position: center;     
+  background-repeat: no-repeat;    
+  background-attachment: fixed;    
   
   margin: 0;
   font-family: Arial, sans-serif;
-  min-height: 100vh;               /* asegura que el fondo cubra toda la altura */
+  min-height: 100vh;              
 }
 
 .arriba{
@@ -112,7 +112,7 @@ justify-content: center;
   Accedé a descuentos, lanzamientos exclusivos y mucho más.
 </p>
 
-    <form action="procesar.php" method="post">
+    <form id="formu" action="procesar.php" method="post">
         <p >Datos Personales</p>
 <label for="nombre">Nombre</label>
 <input type="text" id="nombre" name="nombre">
@@ -143,5 +143,88 @@ justify-content: center;
     © 2025 Retro Camisetas - Todos los derechos reservados
   </footer>
   </div>
+  <div id="errores"></div>
+  <div id="resultado"></div>
+  <script>
+
+const formulario = document.getElementById("formu");
+const errores = document.getElementById("errores");
+const resultado = document.getElementById("resultado");
+
+formulario.addEventListener("submit",function(e){
+  e.preventDefault();
+
+
+const nombre = document.getElementById("nombre").value.trim();
+
+
+  const apellido = document.getElementById("apellido").value.trim();
+  const dni = document.getElementById("dni").value.trim();
+  const tel = document.getElementById("tel").value.trim();
+
+  const email = document.getElementById("email").value.trim();
+  const email2 = document.getElementById("email2").value.trim();
+  const contra = document.getElementById("contra").value.trim();
+
+  const contra1 = document.getElementById("contra1").value.trim();
+  const terminos = document.getElementById("xd").checked;
+
+const emailRegla = /\S+@\S+\.\S+/;
+const telRegla = /^\d{7,15}$/;
+
+let mensajeError=[];
+
+if(nombre===""||apellido===""||dni===""||tel===""||email===""||email2===""||contra===""||contra1===""){
+mensajeError.push("todos los campos son obligatorios");
+
+}
+if(!emailRegla.test(email)||!emailRegla.test(email2)){
+mensajeError.push("ingrese el gmail de la forma correcta");
+
+}
+if(email!==email2){
+
+mensajeError.push("los gmail no coinciden");
+}
+if(contra!==contra1){
+
+mensajeError.push("las contraseñas no coinciden");
+}
+if(!telRegla.test(tel)){
+mensajeError.push("ingrese el numero de telefono de la forma correcta");
+}
+if(contra.length<8||contra1.length<8){
+mensajeError.push("La contraseña debe tener al menos 8 caracteres.");
+
+
+}
+if(!terminos){
+mensajeError.push("debe aceptar los terminos")
+}
+if(mensajeError.length>0){
+errores.style.color="red";
+errores.innerHTML=mensajeError.join("<br>");
+
+
+}else{
+
+resultado.style.color = "green";
+    resultado.innerHTML =
+      "<h3>Datos enviados correctamente:</h3>" +
+      "<ul>" +
+      "<li>Nombre: " + nombre + " " + apellido + "</li>" +
+      "<li>DNI: " + dni + "</li>" +
+      "<li>Teléfono: " + tel + "</li>" +
+      "<li>Email: " + email + "</li>" +
+      "</ul>";
+
+    formulario.reset();
+
+}
+
+});
+
+
+  </script>
 </body>
 </html>
