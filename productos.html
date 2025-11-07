@@ -147,27 +147,112 @@
         transform: scale(1.1);
     }
 
-    .contenedor-carousel {
-        width: 80%;
-        overflow: hidden;
-        margin: auto;
-        border-radius: 10px;
-        border-color: #1A1A1A;
-        position: relative;
-    }
-
-    .slides-carousel {
+    .selector {
         display: flex;
     }
 
+    .columna-izquierda {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .columna-derecha {
+        flex: 1;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .contenedor-carousel {
+        width: 70%;
+        border-radius: 10px;
+        border-color: #1A1A1A;
+        position: relative;
+        display: block;
+        margin: auto;
+        background-color: #205383;
+
+    }
+
+    .slides-carousel-club {
+        position: relative;
+        display: block;
+        height: 90%;
+        align-items: center;
+    }
+
+    .slides-carousel-camisetas {
+        position: relative;
+        display: block;
+        height: 90%;
+        align-items: center;
+    }
+
     .slide {
+        position: relative;
         display: none;
         width: 100%;
+        height: auto;
         box-sizing: border-box;
         transition: opacity 0.5s ease-in-out;
     }
 
     .slide.active {
+        display: block;
+        align-items: center;
+    }
+
+    .previousBoton {
+        margin-top: 20px;
+        margin-right: 20px;
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+
+    .nextBoton {
+        margin-top: 20px;
+        margin-left: 20px;
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+
+    .previousBotonCami {
+        margin-top: 20px;
+        margin-right: 10px;
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+
+    .nextBotonCami {
+        margin-top: 20px;
+        margin-left: 10px;
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+
+    .botonesCarousel {
+        position: absolute;
+        width: 100%;
         display: block;
     }
 </style>
@@ -176,7 +261,7 @@
     <nav class="navbar">
         <div class="nav-logo">
             <a href="../principal.html">
-                <img src="images\logo\logo2.png" alt="logo" style="height: 60px;">
+                <img src="images/logo/logo2.png" alt="logo" style="height: 60px;">
             </a>
         </div>
 
@@ -258,36 +343,258 @@
         </div>
     </div>
 
-    <div
+    <div class="selector"
         style="background-color: #b8eafa; width: 70%; height:300px; text-align: center; margin: 50px auto; border-radius: 10px; padding: 20px; display: flex;">
-        <div class="contenedor-carousel" style="display: flex;">
-            <div class="slides-carousel">
-                <img src="images/img_productos/milan.png" class="slide active"
-                    style="width: 20%; height: 200px; object-fit: cover;">
-                <img src="images/img_productos/arsenal.png" class="slide"
-                    style="width: 20%; height: 200px; object-fit: cover;">
-                <img src="images/img_productos/barcelona.png" class="slide"
-                    style="width: 20%; height: 200px; object-fit: cover;">
-                <img src="images/img_productos/bayernmunchen.png" class="slide"
-                    style="width: 20%; height: 200px; object-fit: cover;">
-                <img src="images/img_productos/boca.png" class="slide"
-                    style="width: 20%; height: 200px; object-fit: cover;">
+        <div class="columna-izquierda">
+            <div class="contenedor-carousel">
+                <div class="slides-carousel-club">
+                    <img src="images/img_productos/milan.png" class="slide"
+                        style="height: 200px; object-fit: contain; align-items: center;">
+                    <img src="images/img_productos/arsenal.png" class="slide"
+                        style="height: 200px; object-fit: contain;">
+                    <img src="images/img_productos/barcelona.png" class="slide"
+                        style="height: 200px; object-fit: contain;">
+                    <img src="images/img_productos/bayernmunchen.png" class="slide"
+                        style="height: 200px; object-fit: contain;">
+                    <img src="images/img_productos/boca.png" class="slide" style="height: 200px; object-fit: contain;">
+
+                    <div class="botonesCarousel">
+                        <button class="previousBoton">
+                            &#10094;
+                        </button>
+                        <button class="nextBoton">
+                            &#10095;
+                        </button>
+                    </div>
+
+                </div>
             </div>
+        </div>
+        <div class="columna-derecha">
+            <div>
+                <h1 style="font-family: oswald, bold; color: #1A1A1A; text-align: center; margin: 0%;">Selecciona tu
+                    camiseta</h1>
+            </div>
+            <div class="contenedor-carousel" style="background-color: #ffffff;">
+                <div class="slides-carousel-camisetas">
+                    <img src="" class="slide" style="height: 200px; object-fit: contain; align-items: center;">
 
-            <button style="width: 20px; height: 20px; margin-right: 10px;">
-                &#10094;
-            </button>
+                    <div class="botonesCarousel">
+                        <button class="previousBotonCami" style="width: 20px; height: 20px; margin-right: 10px;">
+                            &#10094;
+                        </button>
+                        <button class="nextBotonCami" style="width: 20px; height: 20px; margin-left: 10px;">
+                            &#10095;
+                        </button>
+                    </div>
+                </div>
 
-            <button style="width: 20px; height: 20px; margin-left: 10px;">
-                &#10095;
-            </button>
-
+            </div>
         </div>
     </div>
 
+    <div style="text-align: center;">
+        <button
+            style="margin-top: 20px; padding: 10px 20px; background-color: #b8eafa; color: #1A1A1A ; border: none; border-radius: 5px; cursor: pointer; font-family: oswald, bold;">Comprar
+            Ahora
+        </button>
+    </div>
+
+    <div class="selector"
+        style="background-color: #b8eafa; width: 70%; height:300px; text-align: center; margin: 50px auto; border-radius: 10px; padding: 20px; display: flex;">
+        <div class="columna-izquierda">
+            <div class="contenedor-carousel">
+                <div class="slides-carousel-club">
+                    <img src="images/img_productos/milan.png" class="slide"
+                        style="height: 200px; object-fit: contain; align-items: center;">
+                    <img src="images/img_productos/arsenal.png" class="slide"
+                        style="height: 200px; object-fit: contain;">
+                    <img src="images/img_productos/barcelona.png" class="slide"
+                        style="height: 200px; object-fit: contain;">
+                    <img src="images/img_productos/bayernmunchen.png" class="slide"
+                        style="height: 200px; object-fit: contain;">
+                    <img src="images/img_productos/boca.png" class="slide" style="height: 200px; object-fit: contain;">
+
+                    <div class="botonesCarousel">
+                        <button class="previousBoton">
+                            &#10094;
+                        </button>
+                        <button class="nextBoton">
+                            &#10095;
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="columna-derecha">
+            <div>
+                <h1 style="font-family: oswald, bold; color: #1A1A1A; text-align: center; margin: 0%;">Selecciona tu
+                    camiseta</h1>
+            </div>
+            <div class="contenedor-carousel" style="background-color: #ffffff;">
+                <div class="slides-carousel-camisetas">
+                    <img src="" class="slide" style="height: 200px; object-fit: contain; align-items: center;">
+
+                    <div class="botonesCarousel">
+                        <button class="previousBotonCami" style="width: 20px; height: 20px; margin-right: 10px;">
+                            &#10094;
+                        </button>
+                        <button class="nextBotonCami" style="width: 20px; height: 20px; margin-left: 10px;">
+                            &#10095;
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div style="text-align: center;">
+        <button
+            style="margin-top: 20px; padding: 10px 20px; background-color: #b8eafa; color: #1A1A1A ; border: none; border-radius: 5px; cursor: pointer; font-family: oswald, bold;">Comprar
+            Ahora
+        </button>
+    </div>
+
+    <script>
+
+        const datosEquipos = [
+            {
+                nombre: 'AC Milan',
+                logo: 'images/img_productos/milan.png',
+                camisetas: [
+                    'images/img_productos/camisetas/clubes/milan/milan_retro_83-84.webp',
+                    'images/img_productos/camisetas/clubes/milan/milan_retro_88-89.webp',
+                    'images/img_productos/camisetas/clubes/milan/milan_retro_94-95.webp',
+                    'images/img_productos/camisetas/clubes/milan/milan_retro_2007.webp'
+                ]
+            },
+            {
+                nombre: 'Arsenal',
+                logo: 'images/img_productos/arsenal.png',
+                camisetas: [
+                    'images/img_productos/camisetas/clubes/arsenal/arsenal_retro_2004.webp',
+                    'images/img_productos/camisetas/clubes/arsenal/arsenal_retro_2006_suplente.webp',
+                    'images/img_productos/camisetas/clubes/arsenal/arsenal_retro_2006.webp',
+                    'images/img_productos/camisetas/clubes/arsenal/arsenal_retro_traingin.webp'
+                ]
+            },
+            {
+                nombre: 'FC Barcelona',
+                logo: 'images/img_productos/barcelona.png',
+                camisetas: [
+                    'images/img_productos/camisetas/clubes/barca/barca_retro_2006.webp',
+                    'images/img_productos/camisetas/clubes/barca/barca_retro_2008_suplente.webp',
+                    'images/img_productos/camisetas/clubes/barca/barca_retro_training.webp',
+                    'images/img_productos/camisetas/clubes/barca/barcelona_2002_suplente.webp',
+                    'images/img_productos/camisetas/clubes/barca/barcelona_retro_2004.webp'
+                ]
+            },
+            {
+                nombre: 'Bayern Munchen',
+                logo: 'images/img_productos/bayernmunchen.png',
+                camisetas: [
+                    'images/img_productos/camisetas/clubes/bayer/bayern_retro_2000 .webp',
+                    'images/img_productos/camisetas/clubes/bayer/bayern_retro_2004_suplente.webp',
+                    'images/img_productos/camisetas/clubes/bayer/bayern_retro_2004.webp',
+                    'images/img_productos/camisetas/clubes/bayer/bayern_retro_2006_suplente.webp',
+                    'images/img_productos/camisetas/clubes/bayer/bayern_retro_2006.webp'
+                ]
+            },
+            {
+                nombre: 'CA Boca Juniors',
+                logo: 'images/img_productos/boca.png',
+                camisetas: [
+                    'images/img_productos/camisetas/clubes/boca/retro/titular/boca_08-09_titular.webp',
+                    'images/img_productos/camisetas/clubes/boca/retro/titular/boca_98-00_titular.webp',
+                    'images/img_productos/camisetas/clubes/boca/retro/titular/boca_2000-01_titular.webp',
+                    'images/img_productos/camisetas/clubes/boca/retro/titular/boca_2001-02_titular.webp',
+                    'images/img_productos/camisetas/clubes/boca/retro/titular/boca_2005_aniversario_titular.webp',
+                    'images/img_productos/camisetas/clubes/boca/retro/titular/boca_2005_titular.webp'
+                ]
+            }
+        ];
+
+        // Carousel Clubes
+        const nodeListSlides = document.querySelectorAll('.slides-carousel-club .slide');
+        const botonNext = document.querySelector('.nextBoton');
+        const botonPrevious = document.querySelector('.previousBoton');
+        const slidesEquipo = Array.from(nodeListSlides);
+
+        let equipoIndex = 0;
+        const totalSlidesEquipo = slidesEquipo.length;
+
+        const showSlide = (n) => {
+            slidesEquipo.forEach(slide => {
+                slide.classList.remove('active');
+            });
+            slidesEquipo[n].classList.add('active');
+        }
+
+        const moveSlide = (n) => {
+            equipoIndex += n;
+
+            if (equipoIndex >= totalSlidesEquipo) {
+                equipoIndex = 0;
+            }
+
+            if (equipoIndex < 0) {
+                equipoIndex = totalSlidesEquipo - 1;
+            }
+            camiIndex = 0;
+            showSlide(equipoIndex);
+            showSlideCami(camiIndex);
+        }
+
+        showSlide(equipoIndex);
+
+        botonNext.addEventListener('click', () => {
+            moveSlide(1);
+        });
+
+        botonPrevious.addEventListener('click', () => {
+            moveSlide(-1);
+        });
+
+        // Carousel Camisetas
+        const imagenCamiseta = document.querySelector('.slides-carousel-camisetas .slide');
+        const botonNextCami = document.querySelector('.nextBotonCami');
+        const botonPreviousCami = document.querySelector('.previousBotonCami');
+        let camiIndex = 0;
+
+        const showSlideCami = (n) => {
+            const camisetasEquipo = datosEquipos[equipoIndex].camisetas;
+
+            if (camiIndex >= camisetasEquipo.length) {
+                camiIndex = 0;
+            }
+
+            if (camiIndex < 0) {
+                camiIndex = camisetasEquipo.length - 1;
+            }
+
+            imagenCamiseta.src = camisetasEquipo[camiIndex];
+            imagenCamiseta.classList.add('active');
+        }
+
+        const moveSlideCami = (n) => {
+            camiIndex += n;
+            showSlideCami(camiIndex);
+        }
+
+        showSlideCami(camiIndex);
+
+        botonNextCami.addEventListener('click', () => {
+            moveSlideCami(1);
+        });
+
+        botonPreviousCami.addEventListener('click', () => {
+            moveSlideCami(-1);
+        });
 
 
 
-
+    </script>
 
 </html>
