@@ -285,8 +285,7 @@
         <div class="nav-derecha">
             <ul style="list-style: none; margin: 0; padding: 0;">
                 <a href="../principal.html" style="margin-right: 15px;">Inicio</a>
-                <a href="productos.html" style="margin-right: 15px;">Productos</a>
-                <a href="#" style="margin-right: 15px;">Menu</a>
+                <a href="registro.html" style="margin-right: 15px;">Registro</a>
             </ul>
         </div>
     </nav>
@@ -424,7 +423,7 @@
 
     <div class="seccionselecciones" id="seccion-selecciones">
         <h1 class="titulos">SELECCIONES</h1>
-        <div class="equipo">
+        <div class="equipo" style="margin-right: 50px;">
             <div class="seleccion">
                 <img src="images/img_productos/argentina.png" alt="arg"
                     style="width: 200px; height: 200px; object-fit: cover;">
@@ -464,7 +463,7 @@
         style="background-color: #b8eafa; width: 70%; height:300px; text-align: center; margin: 50px auto; border-radius: 10px; padding: 20px; display: flex;">
         <div class="columna-izquierda">
             <div class="contenedor-carousel">
-                <div class="slides-carousel-club">
+                <div class="slides-carousel-seleccion">
                     <img src="images/img_productos/milan.png" class="slide"
                         style="height: 200px; object-fit: contain; align-items: center;">
                     <img src="images/img_productos/arsenal.png" class="slide"
@@ -522,7 +521,48 @@
 
     <script>
 
-        const datosEquipos = [
+        const datosSelecciones = [
+            {
+                nombre: 'Argentina',
+                logo: 'images/img_productos/argentina.png',
+                camisetas: [
+                    'images\img_productos\camisetas\seleccion\argentina\argentina_02-04_titular.webp',
+                    'images\img_productos\camisetas\seleccion\argentina\argentina_86_wc_titular.jpg',
+                    'images\img_productos\camisetas\seleccion\argentina\argentina_98-99_titular.webp',
+                    'images\img_productos\camisetas\seleccion\argentina\argentina_1994_suplente.webp',
+                    'images\img_productos\camisetas\seleccion\argentina\argentina_1994_titular_larga.webp',
+                    'images\img_productos\camisetas\seleccion\argentina\argentina_1994_titular.webp',
+                    'images\img_productos\camisetas\seleccion\argentina\argentina_1999_suplente.webp',
+                    'images\img_productos\camisetas\seleccion\argentina\argentina_2000s_titular.webp',
+                    'images\img_productos\camisetas\seleccion\argentina\argentina_2002_suplente.webp',
+                    'images\img_productos\camisetas\seleccion\argentina\argentina_2006_suplente.webp'
+                ]
+            },
+
+            {
+                nombre: 'Brasil',
+                logo: 'images/img_productos/brasil.png',
+                camisetas: [
+                    'images\img_productos\camisetas\seleccion\brasil\brasil_2006_titular.webp',
+                    'images\img_productos\camisetas\seleccion\brasil\brasil_2009_suplente.webp',
+                    'images\img_productos\camisetas\seleccion\brasil\brasil_2012_suplente.webp'
+                ]
+            },
+            {
+                nombre: 'Alemania',
+                logo: 'images/img_productos/alemania.png',
+                camisetas: [
+                    'images\img_productos\camisetas\seleccion\alemania\alemania_1990_titular.webp',
+                    'images/img_productos/camisetas/seleccion/alemania/alemania_1994_wc_titular.webp',
+                    'images/img_productos/camisetas/seleccion/alemania/alemania_1996_euro_titular.webp',
+                    'images/img_productos/camisetas/seleccion/alemania/alemania_2002_wc_titular.webp',
+                    'images/img_productos/camisetas/seleccion/alemania/alemania_2006_wc_titular.webp'
+                ]
+            }
+            
+        ];
+
+        const datosClubes = [
             {
                 nombre: 'AC Milan',
                 logo: 'images/img_productos/milan.png',
@@ -662,7 +702,7 @@
 
         const showSlideCami = (n) => {
 
-            const camisetasEquipo = datosEquipos[equipoIndex].camisetas;
+            const camisetasEquipo = datosClubes[equipoIndex].camisetas;
 
 
 
