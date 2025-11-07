@@ -138,12 +138,27 @@
         align-items: center;
     }
 
+    .seccionselecciones {
+        text-align: center;
+        margin-top: 40px;
+        align-items: center;
+    }
+
     .club {
         margin-bottom: 20px;
         transition: transform 0.3s ease;
     }
 
     .club:hover {
+        transform: scale(1.1);
+    }
+
+    .seleccion {
+        margin-bottom: 20px;
+        transition: transform 0.3s ease;
+    }
+
+    .seleccion:hover {
         transform: scale(1.1);
     }
 
@@ -296,7 +311,10 @@
         </div>
 
         <div>
-            <img class="imagentipocamiseta" src="images/img_productos/imgselecciones.png" alt="Camiseta Selecciones">
+            <a href="#seccion-selecciones">
+                <img class="imagentipocamiseta" src="images/img_productos/imgselecciones.png"
+                    alt="Camiseta Selecciones">
+            </a>
             <div class="cajita">
                 <h2>Selecciones</h2>
                 <p>Reviví la historia del fútbol con nuestras camisetas retro de selecciones nacionales.</p>
@@ -394,10 +412,52 @@
     </div>
 
     <div style="text-align: center;">
-        <button
-            style="margin-top: 20px; padding: 10px 20px; background-color: #b8eafa; color: #1A1A1A ; border: none; border-radius: 5px; cursor: pointer; font-family: oswald, bold;">Comprar
-            Ahora
-        </button>
+        <a href="registro.html">
+            <button
+                style="margin-top: 20px; padding: 10px 20px; background-color: #b8eafa; color: #1A1A1A ; border: none; border-radius: 5px; cursor: pointer; font-family: oswald, bold;">Registrarse
+                y Comprar
+                Ahora
+            </button>
+        </a>
+    </div>
+    <hr class="separador">
+
+    <div class="seccionselecciones" id="seccion-selecciones">
+        <h1 class="titulos">SELECCIONES</h1>
+        <div class="equipo">
+            <div class="seleccion">
+                <img src="images/img_productos/argentina.png" alt="arg"
+                    style="width: 200px; height: 200px; object-fit: cover;">
+                <h3>Argentina</h3>
+            </div>
+
+            <div class="seleccion">
+                <img src="images/img_productos/brasil.png" alt="bra"
+                    style="width: 200px; height: 200px; object-fit: cover;">
+                <h3>Brasil</h3>
+            </div>
+
+            <div class="seleccion">
+                <img src="images/img_productos/alemania.png" alt="ale"
+                    style="width: 200px; height: 200px; object-fit: cover;">
+                <h3>Alemania</h3>
+
+            </div>
+
+            <div class="seleccion">
+                <img src="images/img_productos/espana.png" alt="spain"
+                    style="width: 200px; height: 200px; object-fit: cover;">
+                <h3>España</h3>
+
+            </div>
+
+            <div class="seleccion">
+                <img src="images/img_productos/inglaterra.png" alt="eng"
+                    style="width: 150px; height: 150px; margin-top: 24px; margin-bottom: 26px; object-fit: contain;">
+                <h3>Inglaterra</h3>
+
+            </div>
+        </div>
     </div>
 
     <div class="selector"
@@ -451,10 +511,13 @@
     </div>
 
     <div style="text-align: center;">
-        <button
-            style="margin-top: 20px; padding: 10px 20px; background-color: #b8eafa; color: #1A1A1A ; border: none; border-radius: 5px; cursor: pointer; font-family: oswald, bold;">Comprar
-            Ahora
-        </button>
+        <a href="registro.html">
+            <button
+                style="margin-top: 20px; padding: 10px 20px; background-color: #b8eafa; color: #1A1A1A ; border: none; border-radius: 5px; cursor: pointer; font-family: oswald, bold;">Registrarse
+                y Comprar
+                Ahora
+            </button>
+        </a>
     </div>
 
     <script>
@@ -517,81 +580,144 @@
         ];
 
         // Carousel Clubes
+
         const nodeListSlides = document.querySelectorAll('.slides-carousel-club .slide');
         const botonNext = document.querySelector('.nextBoton');
         const botonPrevious = document.querySelector('.previousBoton');
         const slidesEquipo = Array.from(nodeListSlides);
 
         let equipoIndex = 0;
+
         const totalSlidesEquipo = slidesEquipo.length;
 
         const showSlide = (n) => {
             slidesEquipo.forEach(slide => {
                 slide.classList.remove('active');
             });
+
             slidesEquipo[n].classList.add('active');
+
         }
 
         const moveSlide = (n) => {
             equipoIndex += n;
 
+
+
             if (equipoIndex >= totalSlidesEquipo) {
+
                 equipoIndex = 0;
+
             }
 
+
+
             if (equipoIndex < 0) {
+
                 equipoIndex = totalSlidesEquipo - 1;
+
             }
+
             camiIndex = 0;
+
             showSlide(equipoIndex);
+
             showSlideCami(camiIndex);
+
         }
+
+
 
         showSlide(equipoIndex);
 
+
+
         botonNext.addEventListener('click', () => {
+
             moveSlide(1);
+
         });
+
+
 
         botonPrevious.addEventListener('click', () => {
+
             moveSlide(-1);
+
         });
 
+
+
         // Carousel Camisetas
+
         const imagenCamiseta = document.querySelector('.slides-carousel-camisetas .slide');
+
         const botonNextCami = document.querySelector('.nextBotonCami');
+
         const botonPreviousCami = document.querySelector('.previousBotonCami');
+
         let camiIndex = 0;
 
+
+
         const showSlideCami = (n) => {
+
             const camisetasEquipo = datosEquipos[equipoIndex].camisetas;
 
+
+
             if (camiIndex >= camisetasEquipo.length) {
+
                 camiIndex = 0;
+
             }
+
+
 
             if (camiIndex < 0) {
+
                 camiIndex = camisetasEquipo.length - 1;
+
             }
 
+
+
             imagenCamiseta.src = camisetasEquipo[camiIndex];
+
             imagenCamiseta.classList.add('active');
+
         }
 
+
+
         const moveSlideCami = (n) => {
+
             camiIndex += n;
+
             showSlideCami(camiIndex);
+
         }
+
+
 
         showSlideCami(camiIndex);
 
+
+
         botonNextCami.addEventListener('click', () => {
+
             moveSlideCami(1);
+
         });
 
+
+
         botonPreviousCami.addEventListener('click', () => {
+
             moveSlideCami(-1);
+
         });
+
 
 
 
