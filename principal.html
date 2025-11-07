@@ -33,6 +33,8 @@
       font-weight: bold;
     }
 
+
+
     .comienzo_derecha a:hover {
       text-decoration: underline;
     }
@@ -77,6 +79,29 @@
     
       
     }
+    #carrusel{
+display: flex;
+justify-content: center;
+align-content: center;
+gap: 20px;
+
+
+    }
+    button{
+background-color: #b8eafa;
+  
+
+  border-radius: 20px;
+  height: 40px;
+  
+ 
+    }
+    button:hover {
+  background-color: lightblue;
+
+  color: white;
+}
+
 
     .imagenes img:hover {
       border-radius: 20px;
@@ -168,18 +193,24 @@
       </ul>
     </section>
     <div id="carrusel">
+      <H1>Sucursal</H1>
 <button id="izq" >izquierda</button>
 
-<img  id= "ima" src="/images/img_inicio/ima1.jpg" alt="">
+<img  id= "ima" src="/images/img_inicio/q1.jpg" alt="">
 <button id="der"> derecha</button>
 
     </div>
     <script>
-const imagenes=["/images/img_inicio/ima1.jpg","/images/img_inicio/ima2.jpg","/images/img_inicio/ima1.jpg"]
+const imagenes=["/images/img_inicio/q1.jpg","/images/img_inicio/q2.jpg","/images/img_inicio/q3.jpg"]
 
 let ini=0;
 
 const imagen= document.getElementById("ima")
+
+
+imagen.style.width = "300px";
+imagen.style.height = "300px";
+imagen.style.borderRadius = "20px";
 const btizquierdo= document.getElementById("izq");
 const btderecho= document.getElementById("der");
 

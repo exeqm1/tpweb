@@ -139,12 +139,12 @@ justify-content: center;
 <input type="submit" value="Continuar" style="border: 2px; border-style: solid;" >
     </form>
     
-    <footer>
+    <footer style="margin-top: 20px;">
     © 2025 Retro Camisetas - Todos los derechos reservados
   </footer>
   </div>
   <div id="errores"></div>
-  <div id="resultado" style=" display: inline-block;  justify-content: center; background-color: #999999; align-items: center ; margin-left: 400px; margin-top: 400px; padding: 100px;" ></div>
+  <div id="resultado" ></div>
   <script>
 
 const formulario = document.getElementById("formu");
@@ -154,6 +154,14 @@ const resultado = document.getElementById("resultado");
 formulario.addEventListener("submit",function(e){
   e.preventDefault();
 
+const resul= document.getElementById("resultado");
+resul.style.backgroundColor="gray";
+resul.style.display="flex";
+resul.style.display="inline-block";
+resul.style.justifyContent="center";
+resul.style.alignItems="center";
+resul.style.marginTop="40px";
+resul.style.marginLeft="500px";
 
 const nombre = document.getElementById("nombre").value.trim();
 
