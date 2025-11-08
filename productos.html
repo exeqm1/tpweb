@@ -287,7 +287,7 @@
         border-radius: 50%;
     }
 
-    .previousBotoSeleccionCami {
+    .previousBotonSeleccionCami {
         margin-top: 20px;
         margin-right: 10px;
         position: relative;
@@ -310,6 +310,12 @@
     }
 
     .botonesCarousel {
+        position: absolute;
+        width: 100%;
+        display: block;
+    }
+
+    .botonesCarouselSeleccion {
         position: absolute;
         width: 100%;
         display: block;
@@ -519,15 +525,17 @@
                     <img src="images/img_productos/inglaterra.png" class="slide"
                         style="height: 150px; margin-top: 50px; object-fit: contain;">
 
+                    <div class="botonesCarouselSeleccion">
+                        <button class="previousBotonSeleccion">
+                            &#10094;
+                        </button>
+                        <button class="nextBotonSeleccion">
+                            &#10095;
+                        </button>
+                    </div>
+
                 </div>
-            </div>
-            <div class="botonesCarouselSeleccion">
-                <button class="previousBotonSeleccion">
-                    &#10094;
-                </button>
-                <button class="nextBotonSeleccion">
-                    &#10095;
-                </button>
+
             </div>
         </div>
         <div class="columna-derecha">
@@ -543,7 +551,7 @@
             </div>
 
             <div class="botonesCarouselSeleccionCami">
-                <button class="previousBotoSeleccionCami" style="width: 20px; height: 20px; margin-right: 10px;">
+                <button class="previousBotonSeleccionCami" style="width: 20px; height: 20px; margin-right: 10px;">
                     &#10094;
                 </button>
                 <button class="nextBotonSeleccionCami" style="width: 20px; height: 20px; margin-left: 10px;">
@@ -562,6 +570,12 @@
             </button>
         </a>
     </div>
+    <hr class="separador">
+
+    <footer
+        style="background-color: #b8eafa; text-align: center; padding: 10px; font-family: oswald, light; color: #1A1A1A;">
+        &copy; 2025 Retro Camisetas. Todos los derechos reservados.
+    </footer>
 
     <script>
 
