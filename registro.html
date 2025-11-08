@@ -149,7 +149,13 @@ justify-content: center;
 
 const formulario = document.getElementById("formu");
 const errores = document.getElementById("errores");
-const resultado = document.getElementById("resultado");
+errores.style.backgroundColor="gray";
+errores.style.display="flex";
+errores.style.display="inline-block";
+errores.style.justifyContent="center";
+errores.style.alignItems="center";
+errores.style.marginTop="40px";
+errores.style.marginLeft="500px";
 
 formulario.addEventListener("submit",function(e){
   e.preventDefault();
