@@ -393,7 +393,7 @@
                     camiseta</h1>
             </div>
             <div class="contenedor-carousel" style="background-color: #ffffff;">
-                <div class="slides-carousel-camisetas">
+                <div class="slides-carousel-camisetas" id="camisetas-club">
                     <img src="" class="slide" style="height: 200px; object-fit: contain; align-items: center;">
 
                     <div class="botonesCarousel">
@@ -472,7 +472,7 @@
                         style="height: 200px; object-fit: contain;">
                     <img src="images/img_productos/espana.png" class="slide"
                         style="height: 200px; object-fit: contain;">
-                    <img src="images/img_productos/inglaterra.png" class="slide" style="height: 150px; margin-top: 50 px; object-fit: contain;">
+                    <img src="images/img_productos/inglaterra.png" class="slide" style="height: 150px; margin-top: 50px; object-fit: contain;">
 
                     <div class="botonesCarouselSeleccion">
                         <button class="previousBotonSeleccion">
@@ -492,7 +492,7 @@
                     camiseta</h1>
             </div>
             <div class="contenedor-carousel" style="background-color: #ffffff;">
-                <div class="slides-carousel-camisetas">
+                <div class="slides-carousel-camisetas" id="camisetas-seleccion">
                     <img src="" class="slide active" style="height: 200px; object-fit: contain; align-items: center;">
 
                     <div class="botonesCarouselSeleccionCami">
@@ -599,7 +599,7 @@
                 nombre: 'Bayern Munchen',
                 logo: 'images/img_productos/bayernmunchen.png',
                 camisetas: [
-                    'images/img_productos/camisetas/clubes/bayer/bayern_retro_2000 .webp',
+                    'images/img_productos/camisetas/clubes/bayer/bayern_retro_2000.webp',
                     'images/img_productos/camisetas/clubes/bayer/bayern_retro_2004_suplente.webp',
                     'images/img_productos/camisetas/clubes/bayer/bayern_retro_2004.webp',
                     'images/img_productos/camisetas/clubes/bayer/bayern_retro_2006_suplente.webp',
@@ -691,7 +691,7 @@
 
         // Carousel Camisetas Clubes
 
-        const imagenCamiseta = document.querySelector('.slides-carousel-camisetas .slide');
+        const imagenCamiseta = document.querySelector('#camisetas-club .slide');
         const botonNextCami = document.querySelector('.nextBotonCami');
         const botonPreviousCami = document.querySelector('.previousBotonCami');
         let camiIndex = 0;
@@ -770,7 +770,7 @@
         });
 
         // Carousel Camisetas Selecciones
-        const imagenCamisetaSeleccion = document.querySelector('.slides-carousel-camisetas .slide');
+        const imagenCamisetaSeleccion = document.querySelector('#camisetas-seleccion .slide');
         const botonNextCamiSeleccion = document.querySelector('.nextBotonSeleccionCami');
         const botonPreviousCamiSeleccion = document.querySelector('.previousBotoSeleccionCami');
         let camiSeleccionIndex = 0;
