@@ -265,6 +265,50 @@
         border-radius: 50%;
     }
 
+    .previousBotonSeleccion {
+        margin-top: 20px;
+        margin-right: 20px;
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+
+    .nextBotonSeleccion {
+        margin-top: 20px;
+        margin-left: 20px;
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+
+    .previousBotoSeleccionCami {
+        margin-top: 20px;
+        margin-right: 10px;
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+
+    .nextBotonSeleccionCami {
+        margin-top: 20px;
+        margin-left: 10px;
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+
     .botonesCarousel {
         position: absolute;
         width: 100%;
@@ -472,7 +516,8 @@
                         style="height: 200px; object-fit: contain;">
                     <img src="images/img_productos/espana.png" class="slide"
                         style="height: 200px; object-fit: contain;">
-                    <img src="images/img_productos/inglaterra.png" class="slide" style="height: 150px; margin-top: 50px; object-fit: contain;">
+                    <img src="images/img_productos/inglaterra.png" class="slide"
+                        style="height: 150px; margin-top: 50px; object-fit: contain;">
 
                     <div class="botonesCarouselSeleccion">
                         <button class="previousBotonSeleccion">
@@ -494,16 +539,15 @@
             <div class="contenedor-carousel" style="background-color: #ffffff;">
                 <div class="slides-carousel-camisetas" id="camisetas-seleccion">
                     <img src="" class="slide active" style="height: 200px; object-fit: contain; align-items: center;">
+                </div>
 
-                    <div class="botonesCarouselSeleccionCami">
-                        <button class="previousBotoSeleccionCami"
-                            style="width: 20px; height: 20px; margin-right: 10px;">
-                            &#10094;
-                        </button>
-                        <button class="nextBotonSeleccionCami" style="width: 20px; height: 20px; margin-left: 10px;">
-                            &#10095;
-                        </button>
-                    </div>
+                <div class="botonesCarouselSeleccionCami">
+                    <button class="previousBotoSeleccionCami" style="width: 20px; height: 20px; margin-right: 10px;">
+                        &#10094;
+                    </button>
+                    <button class="nextBotonSeleccionCami" style="width: 20px; height: 20px; margin-left: 10px;">
+                        &#10095;
+                    </button>
                 </div>
 
             </div>
@@ -558,6 +602,25 @@
                     'images/img_productos/camisetas/seleccion/alemania/alemania_2006_training.webp',
                     'images/img_productos/camisetas/seleccion/alemania/alemania_2010_suplente.webp',
                     'images/img_productos/camisetas/seleccion/alemania/alemania_2010.webp'
+                ]
+            },
+            {
+                nombre: 'España',
+                logo: 'images/img_productos/espana.png',
+                camisetas: [
+                    'images/img_productos/camisetas/seleccion/spain/spain_2006_polo.webp',
+                    'images/img_productos/camisetas/seleccion/spain/spain_2006_suplente.webp',
+                    'images/img_productos/camisetas/seleccion/spain/spain_2006_titular.webp'
+                ]
+            },
+            {
+                nombre: 'Inglaterra',
+                logo: 'images/img_productos/inglaterra.png',
+                camisetas: [
+                    'images/img_productos/camisetas/seleccion/england/england_1993_titular.webp',
+                    'images/img_productos/camisetas/seleccion/england/england_2005_suplente.webp',
+                    'images/img_productos/camisetas/seleccion/england/england_2006_titular.webp',
+                    'images/img_productos/camisetas/seleccion/england/england_2010_titular.webp'
                 ]
             }
 
