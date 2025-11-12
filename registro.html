@@ -56,7 +56,7 @@ form{
 
 border-style: solid;
 border-radius: 30px;
-height: 770px;
+height: 850px;
 width: 350px;
 background-color: rgba(240, 248, 255, 0.9);
 }
@@ -89,6 +89,25 @@ justify-content: center;
 
 
 }
+.error{
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 10px;
+background-color: red;
+color: aliceblue;
+
+
+}
+.result{
+  display: flex;
+justify-content: center;
+align-items: center;
+font-size: 20px;
+background-color:  #001f4d;
+color: aliceblue;
+margin: 30px;
+}
 
 
     </style>
@@ -116,26 +135,41 @@ justify-content: center;
         <p >Datos Personales</p>
 <label for="nombre">Nombre</label>
 <input type="text" id="nombre" name="nombre">
+<div id="errorNombre" class="error"></div>
+
 <label for="apellido">Apellido</label>
 <input type="text" id="apellido" name="apellido">
+<div id="errorApellido" class="error"></div>
+
 <label for="dni">DNI</label>
 <input type="number" id="dni" name="dni">
+<div id="errorDni" class="error"></div>
+
 <label for="tel">Telefono</label>
-<input type="number" id="tel"  name="tel">
+<input type="text" id="tel"  name="tel">
+<div id="errorTel" class="error"></div>
 
 <p>Sobre tu cuenta</p>
 <label for="email">Email</label>
 <input type="email" id="email" name="email">
+<div id="errorEmail" class="error"></div>
 
 <label for="email2">Confirmar Email</label>
 <input type="email" id="email2" name="email2">
+<div id="errorEmail2" class="error"></div>
+
 <label for="contra">Contraseña </label>
 <input type="password" id="contra" name="contra" min="8">
+<div id="errorContra" class="error"></div>
+
 <label for="contra1">Confirmar Contraseña </label>
 <input type="password" id="contra1" name="contra1" min="8">
+<div id="errorContra2" class="error"></div>
 
 <label for="xd">Acepto las Políticas de Privacidad y Términos y Condiciones</label>
 <input type="checkbox" id="xd">
+<div id="errorTerminos" class="error"></div>
+
 <input type="submit" value="Continuar" style="border: 2px; border-style: solid;" >
     </form>
     
@@ -143,31 +177,43 @@ justify-content: center;
     © 2025 Retro Camisetas - Todos los derechos reservados
   </footer>
   </div>
-  <div id="errores"></div>
-  <div id="resultado" ></div>
+  
+  <div id="resultado" class="result"></div>
   <script>
 
 const formulario = document.getElementById("formu");
-const errores = document.getElementById("errores");
-errores.style.backgroundColor="gray";
-errores.style.display="flex";
-errores.style.display="inline-block";
-errores.style.justifyContent="center";
-errores.style.alignItems="center";
-errores.style.marginTop="40px";
-errores.style.marginLeft="500px";
+
+
 
 formulario.addEventListener("submit",function(e){
   e.preventDefault();
+let val=true;
+
+ document.getElementById("errorNombre").textContent="";
+   document.getElementById("errorApellido").textContent="";
+  document.getElementById("errorDni").textContent="";
+document.getElementById("errorTel").textContent="";
+  document.getElementById("errorEmail").textContent="";
+   document.getElementById("errorEmail2").textContent="";
+   document.getElementById("errorContra").textContent="";
+   document.getElementById("errorContra2").textContent="";
+   document.getElementById("errorTerminos").textContent="";
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const resul= document.getElementById("resultado");
-resul.style.backgroundColor="gray";
-resul.style.display="flex";
-resul.style.display="inline-block";
-resul.style.justifyContent="center";
-resul.style.alignItems="center";
-resul.style.marginTop="40px";
-resul.style.marginLeft="500px";
+
 
 const nombre = document.getElementById("nombre").value.trim();
 
@@ -186,55 +232,126 @@ const nombre = document.getElementById("nombre").value.trim();
 const emailRegla = /\S+@\S+\.\S+/;
 const telRegla = /^\d{7,15}$/;
 
-let mensajeError=[];
 
-if(nombre===""||apellido===""||dni===""||tel===""||email===""||email2===""||contra===""||contra1===""){
-mensajeError.push("todos los campos son obligatorios");
 
+
+if(contra1===""){
+document.getElementById("errorContra2").textContent="Debe ingresar una contraseña ";
+val=false;
 }
-if(!emailRegla.test(email)||!emailRegla.test(email2)){
-mensajeError.push("ingrese el gmail de la forma correcta");
 
+if(contra===""){
+document.getElementById("errorContra").textContent="Debe ingresar una contraseña";
+val=false;
 }
+
+
+if(email2===""){
+document.getElementById("errorEmail2").textContent="Debe ingreasr un email";
+val=false;
+}else if(!emailRegla.test(email2)){
+
+document.getElementById("errorEmail2").textContent="ingrese el gmail de la forma correcta";
+val=false;
+}
+
+if(email===""){
+document.getElementById("errorEmail").textContent="Debe ingresar un email";
+val=false;
+}else if(!emailRegla.test(email)){
+
+document.getElementById("errorEmail").textContent="ingrese el gmail de la forma correcta";
+val=false;
+}
+
+if(tel===""){
+
+document.getElementById("errorTel").textContent="Debe ingresar un num de telefono";
+val=false;
+}else if(!telRegla.test(tel)){
+
+ 
+ document.getElementById("errorTel").textContent="ingrese el numero de telefono de la forma correcta";
+val=false;
+}
+
+if(dni===""){
+document.getElementById("errorDni").textContent="Debe ingresar un DNI";
+val=false;
+}
+
+if(apellido===""){
+document.getElementById("errorApellido").textContent="Debe ingresar un apellido";
+val=false;
+}
+
+if(nombre===""){
+document.getElementById("errorNombre").textContent="Debe ingresar un nombre";
+val=false;
+}
+
+
+
+
+
+
+
+
+
+
 if(email!==email2){
-
-mensajeError.push("los gmail no coinciden");
+document.getElementById("errorEmail").textContent="Los campos de email no coinciden";
+document.getElementById("errorEmail2").textContent="los campos de email no coinciden";
+val=false;
 }
 if(contra!==contra1){
 
-mensajeError.push("las contraseñas no coinciden");
+document.getElementById("errorContra").textContent="Los campos del password no coinciden";
+document.getElementById("errorContra2").textContent="Los campos del password no coinciden";
+val=false;
 }
-if(!telRegla.test(tel)){
-mensajeError.push("ingrese el numero de telefono de la forma correcta");
+if(contra.length<8){
+document.getElementById("errorContra").textContent="debe ingresar mas de 8 caracteres";
+val=false;
 }
-if(contra.length<8||contra1.length<8){
-mensajeError.push("La contraseña debe tener al menos 8 caracteres.");
+if(contra1.length<8){
+document.getElementById("errorContra2").textContent="debe ingresar mas de 8 caracteres";
+val=false;
+}
 
-
-}
 if(!terminos){
-mensajeError.push("debe aceptar los terminos")
+  document.getElementById("errorTerminos").textContent="Debe aceptar los terminos";
+val=false;
 }
-if(mensajeError.length>0){
-errores.style.color="red";
-errores.innerHTML=mensajeError.join("<br>");
+if(val){
+resul.textContent = "";
 
 
-}else{
+let titulo=document.createElement("h3");
+titulo.textContent="Registro completo";
+resul.appendChild(titulo);
+const lista = document.createElement("ul");
 
-resultado.style.color = "green";
-    resultado.innerHTML =
-      "<h3>Datos enviados correctamente:</h3>" +
-      "<ul>" +
-      "<li>Nombre: " + nombre + " " + apellido + "</li>" +
-      "<li>DNI: " + dni + "</li>" +
-      "<li>Teléfono: " + tel + "</li>" +
-      "<li>Email: " + email + "</li>" +
-      "</ul>";
+  const liNombre = document.createElement("li");
+  liNombre.textContent = `Nombre: ${nombre}`;
+  lista.appendChild(liNombre);
 
-    formulario.reset();
+  const liApellido = document.createElement("li");
+  liApellido.textContent = `Apellido: ${apellido}`;
+  lista.appendChild(liApellido);
 
+  const liEmail = document.createElement("li");
+  liEmail.textContent = `Email: ${email}`;
+  lista.appendChild(liEmail);
+
+  const liTel = document.createElement("li");
+  liTel.textContent = `Teléfono: ${tel}`;
+  lista.appendChild(liTel);
+
+  resul.appendChild(lista);
 }
+
+
 
 });
 
