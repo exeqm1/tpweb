@@ -1,297 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
-    <style>
-        body {
-  background-image: url(./images/img_inicio/2e3ab52b1035c9c06b2aa21b9db95659.jpg);
-  background-size: cover;          
-  background-position: center;     
-  background-repeat: no-repeat;    
-  background-attachment: fixed;    
-  
-  margin: 0;
-  font-family: Arial, sans-serif;
-  min-height: 100vh;              
-}
 
-.arriba{
-position: sticky;
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro</title>
+  <style>
+    body {
+      background-image: url(./images/img_inicio/2e3ab52b1035c9c06b2aa21b9db95659.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+
+      margin: 0;
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+    }
+
+    .arriba {
+      position: sticky;
       display: flex;
       align-items: center;
       justify-content: space-between;
       background-color: #b8eafa;
-      padding: 10px ;
-        
-}
-.arriba img{
-height: 70px;
+      padding: 10px;
 
-}
-.arriba-derecha a {
- margin-left: 15px;
+    }
+
+    .arriba img {
+      height: 70px;
+
+    }
+
+    .arriba-derecha a {
+      margin-left: 15px;
       color: #001f4d;
       text-decoration: none;
       font-weight: bold;
-  
-}
-.arriba-derecha a:hover{
+
+    }
+
+    .arriba-derecha a:hover {
       text-decoration: underline;
     }
-.relleno{
-    display: flex;
-    flex-direction: column;
-align-items: center;
-justify-content: center;
+
+    .relleno {
+      padding: 70px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
 
 
-}
-form{
- display: flex;
-  flex-direction: column; 
-  align-items: center;     
-  justify-content: center;
+    }
 
-border-style: solid;
-border-radius: 30px;
-height: 850px;
-width: 350px;
-background-color: rgba(240, 248, 255, 0.9);
-}
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 50px 20px 80px 20px;
+      border-style: solid;
+      border-radius: 30px;
+      height: 850px;
+      width: 350px;
+      background-color: rgba(240, 248, 255, 0.9);
+    }
 
-form input:focus {
-  border-color: #000103;
-  
-}
-form input{
-border-style: solid;
-border-bottom: 50px;
+    form input:focus {
+      border-color: #000103;
 
-}
-form label, form input {
-  margin: 6px 0; 
-}
-form p{
-font-size: 20px;
-font-style: italic;
-text-align: center;
-background-color: #999999;
-border-radius: 20px;
+    }
 
-padding: 5px;
-}
-h1+ p{
-color: azure;
-font-size: 20px;
-justify-content: center;
+    form input {
+      border-style: solid;
+      border-bottom: 50px;
 
+    }
 
-}
-.error{
-display: flex;
-justify-content: center;
-align-items: center;
-font-size: 10px;
-background-color: red;
-color: aliceblue;
+    form label,
+    form input {
+      margin: 6px 0;
+    }
 
+    form p {
+      margin: 30px;
+      font-family: oswald, bold;
+      font-size: 20px;
+      text-align: center;
+      background-color: #b8eafa;
+      border-radius: 20px;
 
-}
-.result{
-  display: flex;
-justify-content: center;
-align-items: center;
-font-size: 20px;
-background-color:  #001f4d;
-color: aliceblue;
-margin: 30px;
-}
+      padding: 15px;
+    }
+
+    form label {
+      font-family: oswald, light;
+    }
+
+    form input {
+      height: 30px;
+      width: 250px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    h1+p {
+      color: azure;
+      font-size: 20px;
+      justify-content: center;
 
 
-    </style>
+    }
+
+    .error {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 10px;
+      background-color: red;
+      color: aliceblue;
+
+
+    }
+
+    .result {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      background-color: #001f4d;
+      color: aliceblue;
+      margin: 30px;
+    }
+
+    #logotextprincipal {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: transform 0.3s ease;
+      font-family: oswald, bold;
+      color: #1A1A1A;
+      font-weight: 700;
+      font-size: 24px;
+      margin: 10px;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    #logotextprincipal:hover {
+      transform: translateX(-50%) scale(1.1);
+      transition: transform 0.3s ease;
+
+    }
+
+    .navbar {
+      background-color: #b8eafa;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo,
+    .nav-derecha {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-derecha a {
+      font-family: oswald, light;
+      color: #1A1A1A;
+      text-decoration: none;
+      margin-left: 15px;
+      transition: transform 0.3s ease;
+
+    }
+
+    .nav-derecha a:hover {
+      text-decoration: underline;
+    }
+
+    .separador {
+
+        border: none;
+        height: 2px;
+        background-color: #b8eafa;
+        margin: 40px 50px 40px 50px;
+    }
+
+    .footer-container {
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      background-color: #b8eafa;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 20px;
+    }
+
+  </style>
 </head>
+
 <body>
 
-<div class="arriba">
-<img src="./images/logo/logo2.png" alt="foto perfil">
-<p style="font-size: 24px; align-items: center;font-family: oswald, bold; " >RETRO CAMISETAS</p>
-  
-<div class="arriba-derecha">
-<a href="./index.html">Principal</a>
-<a href="./productos.html">Productos</a>
-</div>
+  <nav class="navbar">
+    <div class="nav-logo">
+      <a href="./index.html">
+        <img src="./images/logo/logo2.png" alt="logo" style="height: 60px;">
+      </a>
+    </div>
 
-</div >
-<div class="relleno">
- <h1 style="color: beige;">Registrarse</h1>
- <p >
-  Unite a la comunidad de <b>Retro Camisetas</b> y viví la pasión por el fútbol clásico.  
-  Accedé a descuentos, lanzamientos exclusivos y mucho más.
-</p>
+    <a href="./index.html" id="logotextprincipal" style="text-align: center;">RETRO CAMISETAS</a>
 
-    <form id="formu" action="procesar.php" method="post">
-        <p >Datos Personales</p>
-<label for="nombre">Nombre</label>
-<input type="text" id="nombre" name="nombre">
-<div id="errorNombre" class="error"></div>
+    <div class="nav-derecha">
+      <ul style="list-style: none; margin: 0; padding: 0;">
+        <a href="./index.html" style="margin-right: 15px;">Inicio</a>
+        <a href="./productos.html" style="margin-right: 15px;">Productos</a>
+      </ul>
+    </div>
+  </nav>
+  <div class="relleno">
+  <form id="formu" action="procesar.php" method="post">
+    <p>Datos Personales</p>
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" name="nombre">
+    <div id="errorNombre" class="error"></div>
 
-<label for="apellido">Apellido</label>
-<input type="text" id="apellido" name="apellido">
-<div id="errorApellido" class="error"></div>
+    <label for="apellido">Apellido</label>
+    <input type="text" id="apellido" name="apellido">
+    <div id="errorApellido" class="error"></div>
 
-<label for="dni">DNI</label>
-<input type="number" id="dni" name="dni">
-<div id="errorDni" class="error"></div>
+    <label for="dni">DNI</label>
+    <input type="number" id="dni" name="dni">
+    <div id="errorDni" class="error"></div>
 
-<label for="tel">Telefono</label>
-<input type="text" id="tel"  name="tel">
-<div id="errorTel" class="error"></div>
+    <label for="tel">Telefono</label>
+    <input type="text" id="tel" name="tel">
+    <div id="errorTel" class="error"></div>
 
-<p>Sobre tu cuenta</p>
-<label for="email">Email</label>
-<input type="email" id="email" name="email">
-<div id="errorEmail" class="error"></div>
+    <p>Sobre tu cuenta</p>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email">
+    <div id="errorEmail" class="error"></div>
 
-<label for="email2">Confirmar Email</label>
-<input type="email" id="email2" name="email2">
-<div id="errorEmail2" class="error"></div>
+    <label for="email2">Confirmar Email</label>
+    <input type="email" id="email2" name="email2">
+    <div id="errorEmail2" class="error"></div>
 
-<label for="contra">Contraseña </label>
-<input type="password" id="contra" name="contra" min="8">
-<div id="errorContra" class="error"></div>
+    <label for="contra">Contraseña </label>
+    <input type="password" id="contra" name="contra" min="8">
+    <div id="errorContra" class="error"></div>
 
-<label for="contra1">Confirmar Contraseña </label>
-<input type="password" id="contra1" name="contra1" min="8">
-<div id="errorContra2" class="error"></div>
+    <label for="contra1">Confirmar Contraseña </label>
+    <input type="password" id="contra1" name="contra1" min="8">
+    <div id="errorContra2" class="error"></div>
 
-<label for="xd">Acepto las Políticas de Privacidad y Términos y Condiciones</label>
-<input type="checkbox" id="xd">
-<div id="errorTerminos" class="error"></div>
+    <label for="xd">Acepto las Políticas de Privacidad y Términos y Condiciones</label>
+    <input type="checkbox" id="xd">
+    <div id="errorTerminos" class="error"></div>
 
-<input type="submit" value="Continuar" style="border: 2px; border-style: solid;" >
-    </form>
-    
-    <footer style="margin-top: 20px;">
+    <input type="submit" value="Continuar" style="border: 2px; border-style: solid;">
+  </form>
+  </div>
+   <div id="resultado" class="result"></div>
+
+  <div class="footer-container">
+  <footer style="font-family: oswald, light">
     © 2025 Retro Camisetas - Todos los derechos reservados
   </footer>
   </div>
-  
-  <div id="resultado" class="result"></div>
-  <script>
-
-const formulario = document.getElementById("formu");
-
-
-
-formulario.addEventListener("submit",function(e){
-  e.preventDefault();
-let val=true;
-
- document.getElementById("errorNombre").textContent="";
-   document.getElementById("errorApellido").textContent="";
-  document.getElementById("errorDni").textContent="";
-document.getElementById("errorTel").textContent="";
-  document.getElementById("errorEmail").textContent="";
-   document.getElementById("errorEmail2").textContent="";
-   document.getElementById("errorContra").textContent="";
-   document.getElementById("errorContra2").textContent="";
-   document.getElementById("errorTerminos").textContent="";
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const resul= document.getElementById("resultado");
-
-
-const nombre = document.getElementById("nombre").value.trim();
-
-
-  const apellido = document.getElementById("apellido").value.trim();
-  const dni = document.getElementById("dni").value.trim();
-  const tel = document.getElementById("tel").value.trim();
-
-  const email = document.getElementById("email").value.trim();
-  const email2 = document.getElementById("email2").value.trim();
-  const contra = document.getElementById("contra").value.trim();
-
-  const contra1 = document.getElementById("contra1").value.trim();
-  const terminos = document.getElementById("xd").checked;
-
-const emailRegla = /\S+@\S+\.\S+/;
-const telRegla = /^\d{7,15}$/;
-
-
-
-
-if(contra1===""){
-document.getElementById("errorContra2").textContent="Debe ingresar una contraseña ";
-val=false;
-}
-
-if(contra===""){
-document.getElementById("errorContra").textContent="Debe ingresar una contraseña";
-val=false;
-}
-
-
-if(email2===""){
-document.getElementById("errorEmail2").textContent="Debe ingreasr un email";
-val=false;
-}else if(!emailRegla.test(email2)){
-
-document.getElementById("errorEmail2").textContent="ingrese el gmail de la forma correcta";
-val=false;
-}
-
-if(email===""){
-document.getElementById("errorEmail").textContent="Debe ingresar un email";
-val=false;
-}else if(!emailRegla.test(email)){
-
-document.getElementById("errorEmail").textContent="ingrese el gmail de la forma correcta";
-val=false;
-}
-
-if(tel===""){
-
-document.getElementById("errorTel").textContent="Debe ingresar un num de telefono";
-val=false;
-}else if(!telRegla.test(tel)){
 
  
- document.getElementById("errorTel").textContent="ingrese el numero de telefono de la forma correcta";
-val=false;
-}
+  <script>
 
-if(dni===""){
-document.getElementById("errorDni").textContent="Debe ingresar un DNI";
-val=false;
-}
-
-if(apellido===""){
-document.getElementById("errorApellido").textContent="Debe ingresar un apellido";
-val=false;
-}
-
-if(nombre===""){
-document.getElementById("errorNombre").textContent="Debe ingresar un nombre";
-val=false;
-}
+    const formulario = document.getElementById("formu");
 
 
 
+    formulario.addEventListener("submit", function (e) {
+      e.preventDefault();
+      let val = true;
+
+      document.getElementById("errorNombre").textContent = "";
+      document.getElementById("errorApellido").textContent = "";
+      document.getElementById("errorDni").textContent = "";
+      document.getElementById("errorTel").textContent = "";
+      document.getElementById("errorEmail").textContent = "";
+      document.getElementById("errorEmail2").textContent = "";
+      document.getElementById("errorContra").textContent = "";
+      document.getElementById("errorContra2").textContent = "";
+      document.getElementById("errorTerminos").textContent = "";
 
 
 
@@ -299,63 +302,158 @@ val=false;
 
 
 
-if(email!==email2){
-document.getElementById("errorEmail").textContent="Los campos de email no coinciden";
-document.getElementById("errorEmail2").textContent="los campos de email no coinciden";
-val=false;
-}
-if(contra!==contra1){
-
-document.getElementById("errorContra").textContent="Los campos del password no coinciden";
-document.getElementById("errorContra2").textContent="Los campos del password no coinciden";
-val=false;
-}
-if(contra.length<8){
-document.getElementById("errorContra").textContent="debe ingresar mas de 8 caracteres";
-val=false;
-}
-if(contra1.length<8){
-document.getElementById("errorContra2").textContent="debe ingresar mas de 8 caracteres";
-val=false;
-}
-
-if(!terminos){
-  document.getElementById("errorTerminos").textContent="Debe aceptar los terminos";
-val=false;
-}
-if(val){
-resul.textContent = "";
-
-
-let titulo=document.createElement("h3");
-titulo.textContent="Registro completo";
-resul.appendChild(titulo);
-const lista = document.createElement("ul");
-
-  const liNombre = document.createElement("li");
-  liNombre.textContent = `Nombre: ${nombre}`;
-  lista.appendChild(liNombre);
-
-  const liApellido = document.createElement("li");
-  liApellido.textContent = `Apellido: ${apellido}`;
-  lista.appendChild(liApellido);
-
-  const liEmail = document.createElement("li");
-  liEmail.textContent = `Email: ${email}`;
-  lista.appendChild(liEmail);
-
-  const liTel = document.createElement("li");
-  liTel.textContent = `Teléfono: ${tel}`;
-  lista.appendChild(liTel);
-
-  resul.appendChild(lista);
-}
 
 
 
-});
+
+
+
+
+      const resul = document.getElementById("resultado");
+
+
+      const nombre = document.getElementById("nombre").value.trim();
+
+
+      const apellido = document.getElementById("apellido").value.trim();
+      const dni = document.getElementById("dni").value.trim();
+      const tel = document.getElementById("tel").value.trim();
+
+      const email = document.getElementById("email").value.trim();
+      const email2 = document.getElementById("email2").value.trim();
+      const contra = document.getElementById("contra").value.trim();
+
+      const contra1 = document.getElementById("contra1").value.trim();
+      const terminos = document.getElementById("xd").checked;
+
+      const emailRegla = /\S+@\S+\.\S+/;
+      const telRegla = /^\d{7,15}$/;
+
+
+
+
+      if (contra1 === "") {
+        document.getElementById("errorContra2").textContent = "Debe ingresar una contraseña ";
+        val = false;
+      }
+
+      if (contra === "") {
+        document.getElementById("errorContra").textContent = "Debe ingresar una contraseña";
+        val = false;
+      }
+
+
+      if (email2 === "") {
+        document.getElementById("errorEmail2").textContent = "Debe ingreasr un email";
+        val = false;
+      } else if (!emailRegla.test(email2)) {
+
+        document.getElementById("errorEmail2").textContent = "ingrese el gmail de la forma correcta";
+        val = false;
+      }
+
+      if (email === "") {
+        document.getElementById("errorEmail").textContent = "Debe ingresar un email";
+        val = false;
+      } else if (!emailRegla.test(email)) {
+
+        document.getElementById("errorEmail").textContent = "ingrese el gmail de la forma correcta";
+        val = false;
+      }
+
+      if (tel === "") {
+
+        document.getElementById("errorTel").textContent = "Debe ingresar un num de telefono";
+        val = false;
+      } else if (!telRegla.test(tel)) {
+
+
+        document.getElementById("errorTel").textContent = "ingrese el numero de telefono de la forma correcta";
+        val = false;
+      }
+
+      if (dni === "") {
+        document.getElementById("errorDni").textContent = "Debe ingresar un DNI";
+        val = false;
+      }
+
+      if (apellido === "") {
+        document.getElementById("errorApellido").textContent = "Debe ingresar un apellido";
+        val = false;
+      }
+
+      if (nombre === "") {
+        document.getElementById("errorNombre").textContent = "Debe ingresar un nombre";
+        val = false;
+      }
+
+
+
+
+
+
+
+
+
+
+      if (email !== email2) {
+        document.getElementById("errorEmail").textContent = "Los campos de email no coinciden";
+        document.getElementById("errorEmail2").textContent = "los campos de email no coinciden";
+        val = false;
+      }
+      if (contra !== contra1) {
+
+        document.getElementById("errorContra").textContent = "Los campos del password no coinciden";
+        document.getElementById("errorContra2").textContent = "Los campos del password no coinciden";
+        val = false;
+      }
+      if (contra.length < 8) {
+        document.getElementById("errorContra").textContent = "debe ingresar mas de 8 caracteres";
+        val = false;
+      }
+      if (contra1.length < 8) {
+        document.getElementById("errorContra2").textContent = "debe ingresar mas de 8 caracteres";
+        val = false;
+      }
+
+      if (!terminos) {
+        document.getElementById("errorTerminos").textContent = "Debe aceptar los terminos";
+        val = false;
+      }
+      if (val) {
+        resul.textContent = "";
+
+
+        let titulo = document.createElement("h3");
+        titulo.textContent = "Registro completo";
+        resul.appendChild(titulo);
+        const lista = document.createElement("ul");
+
+        const liNombre = document.createElement("li");
+        liNombre.textContent = `Nombre: ${nombre}`;
+        lista.appendChild(liNombre);
+
+        const liApellido = document.createElement("li");
+        liApellido.textContent = `Apellido: ${apellido}`;
+        lista.appendChild(liApellido);
+
+        const liEmail = document.createElement("li");
+        liEmail.textContent = `Email: ${email}`;
+        lista.appendChild(liEmail);
+
+        const liTel = document.createElement("li");
+        liTel.textContent = `Teléfono: ${tel}`;
+        lista.appendChild(liTel);
+
+        resul.appendChild(lista);
+      }
+
+
+
+    });
 
 
   </script>
 </body>
+
 </html>

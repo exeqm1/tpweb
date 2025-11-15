@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Retro Camisetas</title>
@@ -13,7 +17,7 @@
     }
 
     .comienzo {
-      
+
       top: 0;
       display: flex;
       align-items: center;
@@ -43,16 +47,16 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 80px; 
+      font-size: 80px;
       color: #030f0d;
-      margin: 40px; 
-      position: relative; 
+      margin: 40px;
+      position: relative;
     }
 
     h1::after {
       content: "";
       display: inline-block;
-      width: 80px;  
+      width: 80px;
       height: 80px;
       margin-left: 15px;
       background-image: url(./images/img_inicio/maradopng.png);
@@ -76,31 +80,34 @@
     .imagenes img {
       width: 220px;
       height: 220px;
-    
-      
-    }
-    #carrusel{
-display: flex;
-justify-content: center;
-align-content: center;
-gap: 20px;
 
 
     }
-    button{
-background-color: #b8eafa;
-  
 
-  border-radius: 20px;
-  height: 40px;
-  
- 
+    #carrusel {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      gap: 20px;
+
+
     }
+
+    button {
+      background-color: #b8eafa;
+
+
+      border-radius: 20px;
+      height: 40px;
+
+
+    }
+
     button:hover {
-  background-color: lightblue;
+      background-color: lightblue;
 
-  color: white;
-}
+      color: white;
+    }
 
 
     .imagenes img:hover {
@@ -108,7 +115,8 @@ background-color: #b8eafa;
       transform: scale(1.4);
     }
 
-    .txt, .lista {
+    .txt,
+    .lista {
       background-color: black;
       border: 3px solid rgb(65, 55, 55);
       padding: 15px;
@@ -134,35 +142,101 @@ background-color: #b8eafa;
       text-align: center;
       margin: 20px 0;
       color: black;
-     
+
     }
 
     .abajo {
       display: flex;
       justify-content: space-around;
-      background: #4b504f;
-      color: white;
+      background:#b8e9fa65;
+      color: rgb(0, 0, 0);
       font-size: 15px;
       padding: 20px 0;
+      margin-top: 20px;
+      font-family: oswald, light;
     }
 
     .espacio {
-      display: flex;             
+      display: flex;
       flex-direction: column;
       gap: 80px;
+    }
+
+    .footer-container {
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      background-color: #b8eafa;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .navbar {
+      background-color: #b8eafa;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo,
+    .nav-derecha {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-derecha a {
+      font-family: oswald, light;
+      color: #1A1A1A;
+      text-decoration: none;
+      margin-left: 15px;
+      transition: transform 0.3s ease;
+
+    }
+
+    .nav-derecha a:hover {
+      text-decoration: underline;
+    }
+
+    #logotextprincipal {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: transform 0.3s ease;
+      font-family: oswald, bold;
+      color: #1A1A1A;
+      font-weight: 700;
+      font-size: 24px;
+      margin: 10px;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    #logotextprincipal:hover {
+      transform: translateX(-50%) scale(1.1);
+      transition: transform 0.3s ease;
+
     }
   </style>
 </head>
 
 <body>
-  <div class="comienzo">
-    <img src="./images/logo/logo2.png" alt="Logo Retro Camisetas">
-    <p style="font-size: 24px; font-family: Oswald, sans-serif;">RETRO CAMISETAS</p>
-    <nav class="comienzo_derecha">
-      <a href="./productos.html">Productos</a>
-      <a href="./registro.html">Registro</a>
-    </nav>
-  </div>
+ <nav class="navbar">
+    <div class="nav-logo">
+      <a href="./index.html">
+        <img src="./images/logo/logo2.png" alt="logo" style="height: 60px;">
+      </a>
+    </div>
+
+    <a href="./index.html" id="logotextprincipal" style="text-align: center;">RETRO CAMISETAS</a>
+
+    <div class="nav-derecha">
+      <ul style="list-style: none; margin: 0; padding: 0;">
+        <a href="./productos.html" style="margin-right: 15px;">Productos</a>
+        <a href="./registro.html" style="margin-right: 15px;">Registro</a>
+      </ul>
+    </div>
+  </nav>
 
   <div class="espacio">
     <h1>Retro Camisetas</h1>
@@ -194,48 +268,12 @@ background-color: #b8eafa;
     </section>
     <div id="carrusel">
       <H1>Sucursal</H1>
-<button id="izq" >izquierda</button>
+      <button id="izq"> &#10094; </button>
 
-<img  id= "ima" src="./images/img_inicio/q1.jpg" alt="">
-<button id="der"> derecha</button>
+      <img id="ima" src="./images/img_inicio/q1.jpg" alt="">
+      <button id="der"> &#10095; </button>
 
     </div>
-    <script>
-const imagenes=["./images/img_inicio/q1.jpg","/images/img_inicio/q2.jpg","/images/img_inicio/q3.jpg"]
-
-let ini=0;
-
-const imagen= document.getElementById("ima")
-
-
-imagen.style.width = "300px";
-imagen.style.height = "300px";
-imagen.style.borderRadius = "20px";
-const btizquierdo= document.getElementById("izq");
-const btderecho= document.getElementById("der");
-
-function mostrarimagen(){
-imagen.src= imagenes[ini];
-
-}
-btderecho.addEventListener('click',function () {
-  ini++;
-      if (ini >= imagenes.length)  ini= 0; 
-      mostrarimagen()
-
-})
-
-
-btizquierdo.addEventListener('click',function () {
-  ini--;
-      if (ini < 0) ini = imagenes.length - 1; 
-      mostrarimagen()
-
-})
-
-    </script>
-
-   
   </div>
 
   <div class="abajo">
@@ -276,7 +314,53 @@ btizquierdo.addEventListener('click',function () {
         <li>Entregas</li>
       </ul>
     </div>
+
   </div>
-   <footer>© 2025 Retro Camisetas - Todos los derechos reservados</footer>
+
+  <div class="footer-container">
+    <footer style="font-family: oswald, light">
+      © 2025 Retro Camisetas - Todos los derechos reservados
+    </footer>
+  </div>
+  <script>
+    const imagenes = ["./images/img_inicio/q1.jpg", "/images/img_inicio/q2.jpg", "/images/img_inicio/q3.jpg"]
+
+    let ini = 0;
+
+    const imagen = document.getElementById("ima")
+
+
+    imagen.style.width = "300px";
+    imagen.style.height = "300px";
+    imagen.style.borderRadius = "20px";
+    const btizquierdo = document.getElementById("izq");
+    const btderecho = document.getElementById("der");
+
+    function mostrarimagen() {
+      imagen.src = imagenes[ini];
+
+    }
+    btderecho.addEventListener('click', function () {
+      ini++;
+      if (ini >= imagenes.length) ini = 0;
+      mostrarimagen()
+
+    })
+
+
+    btizquierdo.addEventListener('click', function () {
+      ini--;
+      if (ini < 0) ini = imagenes.length - 1;
+      mostrarimagen()
+
+    })
+
+  </script>
+
+
+
+
+
 </body>
+
 </html>
